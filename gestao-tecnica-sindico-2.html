@@ -1,0 +1,3337 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<meta name="theme-color" content="#121729" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>Gestão e administração condominial</title>
+
+<style>
+
+:root {
+  --bg: #121729;
+  --bg-header-95: rgba(18,23,41,0.95);
+  --bg-card: #1A2138;
+  --bg-card-alt: #212A47;
+  --border: #303B58;
+  --border-soft: #242C46;
+  --text-primary: #ECEFF7;
+  --text-body: #C3CBDE;
+  --text-secondary: #9AA6C0;
+  --text-muted: #7883A0;
+  --text-faint: #5B6580;
+  --accent: #4FD1C5;
+  --accent-contrast: #12172A;
+  --accent-hover: #7EE0D6;
+  --accent-15: rgba(79,209,197,0.15);
+  --accent-30: rgba(79,209,197,0.30);
+  --accent-50: rgba(79,209,197,0.50);
+  --blue-accent: #7C93F0;
+  --danger: #E8918D;
+  --danger-15: rgba(232,145,141,0.15);
+  --warning: #EFC373;
+  --warning-15: rgba(239,195,115,0.15);
+  --warning-40: rgba(239,195,115,0.40);
+  --success: #6FD9A8;
+  --info: #7EC1E8;
+  --purple: #B9A6F2;
+}
+[data-theme="claro"] {
+  --bg: #F5F7FB;
+  --bg-header-95: rgba(245,247,251,0.95);
+  --bg-card: #FFFFFF;
+  --bg-card-alt: #EEF1F8;
+  --border: #E1E5F0;
+  --border-soft: #EAEDF5;
+  --text-primary: #1E2536;
+  --text-body: #3D465C;
+  --text-secondary: #5B6478;
+  --text-muted: #838DA3;
+  --text-faint: #A6AEBD;
+  --accent: #14B8A6;
+  --accent-contrast: #FFFFFF;
+  --accent-hover: #0F9C8C;
+  --accent-15: rgba(20,184,166,0.12);
+  --accent-30: rgba(20,184,166,0.25);
+  --accent-50: rgba(20,184,166,0.45);
+  --blue-accent: #4C63D2;
+  --danger: #D9645F;
+  --danger-15: rgba(217,100,95,0.12);
+  --warning: #C88A22;
+  --warning-15: rgba(200,138,34,0.12);
+  --warning-40: rgba(200,138,34,0.35);
+  --success: #2FAE72;
+  --info: #3B92C7;
+  --purple: #8C74E0;
+}
+html, body { background: var(--bg); transition: background-color 0.2s ease; }
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.-right-0\.5{right:-.125rem}.-right-10{right:-2.5rem}.-top-0\.5{top:-.125rem}.-top-10{top:-2.5rem}.bottom-0{bottom:0}.bottom-20{bottom:5rem}.bottom-4{bottom:1rem}.left-0{left:0}.left-4{left:1rem}.right-4{right:1rem}.top-0{top:0}.top-4{top:1rem}.top-6{top:1.5rem}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-1{margin-top:.25rem}.mb-1,.my-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:.375rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-36{height:9rem}.h-4{height:1rem}.h-9{height:2.25rem}.h-px{height:1px}.max-h-40{max-height:10rem}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-36{width:9rem}.w-4{width:1rem}.w-56{width:14rem}.w-9{width:2.25rem}.w-\[92vw\]{width:92vw}.w-full{width:100%}.min-w-0{min-width:0}.max-w-5xl{max-width:64rem}.max-w-\[110px\]{max-width:110px}.max-w-\[200px\]{max-width:200px}.max-w-\[85\%\]{max-width:85%}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-rotate-90{--tw-rotate:-90deg}.-rotate-90,.rotate-90{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-90{--tw-rotate:90deg}.cursor-pointer{cursor:pointer}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0\.5{gap:.125rem}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.whitespace-pre-line{white-space:pre-line}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-\[var\(--accent-30\)\]{border-color:var(--accent-30)}.border-\[var\(--border\)\]{border-color:var(--border)}.border-\[var\(--border-soft\)\]{border-color:var(--border-soft)}.border-\[var\(--warning-40\)\]{border-color:var(--warning-40)}.bg-\[var\(--accent\)\]{background-color:var(--accent)}.bg-\[var\(--accent-15\)\]{background-color:var(--accent-15)}.bg-\[var\(--bg\)\]{background-color:var(--bg)}.bg-\[var\(--bg-card\)\]{background-color:var(--bg-card)}.bg-\[var\(--bg-card-alt\)\]{background-color:var(--bg-card-alt)}.bg-\[var\(--bg-header-95\)\]{background-color:var(--bg-header-95)}.bg-\[var\(--border\)\]{background-color:var(--border)}.bg-\[var\(--danger\)\]{background-color:var(--danger)}.bg-\[var\(--warning-15\)\]{background-color:var(--warning-15)}.bg-black\/60{background-color:rgba(0,0,0,.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.object-cover{-o-object-fit:cover;object-fit:cover}.p-0{padding:0}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-1{padding-bottom:.25rem}.pb-3{padding-bottom:.75rem}.pb-4{padding-bottom:1rem}.pl-5{padding-left:1.25rem}.pr-4{padding-right:1rem}.pt-0\.5{padding-top:.125rem}.pt-1{padding-top:.25rem}.pt-2{padding-top:.5rem}.pt-3{padding-top:.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.text-\[\#1F2937\]{--tw-text-opacity:1;color:rgb(31 41 55/var(--tw-text-opacity,1))}.text-\[var\(--accent\)\]{color:var(--accent)}.text-\[var\(--accent-contrast\)\]{color:var(--accent-contrast)}.text-\[var\(--accent-hover\)\]{color:var(--accent-hover)}.text-\[var\(--danger\)\]{color:var(--danger)}.text-\[var\(--text-body\)\]{color:var(--text-body)}.text-\[var\(--text-faint\)\]{color:var(--text-faint)}.text-\[var\(--text-muted\)\]{color:var(--text-muted)}.text-\[var\(--text-primary\)\]{color:var(--text-primary)}.text-\[var\(--text-secondary\)\]{color:var(--text-secondary)}.text-\[var\(--warning\)\]{color:var(--warning)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-black\/10{--tw-shadow-color:rgba(0,0,0,.1);--tw-shadow:var(--tw-shadow-colored)}.shadow-black\/20{--tw-shadow-color:rgba(0,0,0,.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-black\/40{--tw-shadow-color:rgba(0,0,0,.4);--tw-shadow:var(--tw-shadow-colored)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.last\:border-0:last-child{border-width:0}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-\[var\(--accent-50\)\]:hover{border-color:var(--accent-50)}.hover\:bg-\[var\(--bg-card-alt\)\]:hover{background-color:var(--bg-card-alt)}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.hover\:text-\[var\(--accent\)\]:hover{color:var(--accent)}.hover\:text-\[var\(--accent-hover\)\]:hover{color:var(--accent-hover)}.hover\:text-\[var\(--danger\)\]:hover{color:var(--danger)}.hover\:text-\[var\(--text-primary\)\]:hover{color:var(--text-primary)}.hover\:text-\[var\(--text-secondary\)\]:hover{color:var(--text-secondary)}.focus\:border-\[var\(--accent\)\]:focus{border-color:var(--accent)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-\[var\(--accent-50\)\]:focus{--tw-ring-color:var(--accent-50)}.disabled\:opacity-40:disabled{opacity:.4}.disabled\:opacity-50:disabled{opacity:.5}@media (min-width:640px){.sm\:max-w-lg{max-width:32rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:items-center{align-items:center}.sm\:rounded-2xl{border-radius:1rem}.sm\:p-4{padding:1rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.4/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo, useRef } = React;
+
+/* ---------------------------------------------------------
+   Ícones (SVG próprios, sem depender de pacote externo)
+--------------------------------------------------------- */
+function IconBase({ size = 16, className = "", children, ...rest }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...rest}>
+      {children}
+    </svg>
+  );
+}
+function LayoutDashboard(props) {
+  return (<IconBase {...props}><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></IconBase>);
+}
+function ClipboardList(props) {
+  return (<IconBase {...props}><path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z"/><rect x="5" y="6" width="14" height="15" rx="2"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="16" y2="15"/></IconBase>);
+}
+function ShieldCheck(props) {
+  return (<IconBase {...props}><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></IconBase>);
+}
+function Wrench(props) {
+  return (<IconBase {...props}><path d="M7 21l6-6"/><path d="M15.5 3.5a3 3 0 1 1-4.2 4.2L4 15l2 2 7.3-7.3a3 3 0 0 1 4.2-4.2z"/></IconBase>);
+}
+function Megaphone(props) {
+  return (<IconBase {...props}><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M14 8a4 4 0 0 1 0 8"/><path d="M17 5a8 8 0 0 1 0 14"/></IconBase>);
+}
+function Plus(props) {
+  return (<IconBase {...props}><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></IconBase>);
+}
+function X(props) {
+  return (<IconBase {...props}><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></IconBase>);
+}
+function ChevronRight(props) {
+  return (<IconBase {...props}><polyline points="9 6 15 12 9 18"/></IconBase>);
+}
+function ChevronLeft(props) {
+  return (<IconBase {...props}><polyline points="15 6 9 12 15 18"/></IconBase>);
+}
+function Trash2(props) {
+  return (<IconBase {...props}><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></IconBase>);
+}
+function Pencil(props) {
+  return (<IconBase {...props}><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></IconBase>);
+}
+function Bell(props) {
+  return (<IconBase {...props}><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></IconBase>);
+}
+function MapPin(props) {
+  return (<IconBase {...props}><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></IconBase>);
+}
+function User(props) {
+  return (<IconBase {...props}><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></IconBase>);
+}
+function Calendar(props) {
+  return (<IconBase {...props}><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></IconBase>);
+}
+function ArrowRight(props) {
+  return (<IconBase {...props}><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></IconBase>);
+}
+function CalendarClock(props) {
+  return (<IconBase {...props}><path d="M8 2v4"/><path d="M3 10h9"/><path d="M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v3.5"/><path d="M3 6v13a2 2 0 0 0 2 2h6"/><circle cx="17" cy="16" r="4"/><path d="M17 14.5V16l1 1"/></IconBase>);
+}
+function Briefcase(props) {
+  return (<IconBase {...props}><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="3" y1="13" x2="21" y2="13"/></IconBase>);
+}
+function Droplet(props) {
+  return (<IconBase {...props}><path d="M12 2s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12z"/></IconBase>);
+}
+function Paperclip(props) {
+  return (<IconBase {...props}><path d="M21 12.5l-8.5 8.5a5 5 0 0 1-7-7l9-9a3.5 3.5 0 0 1 5 5l-9 9a2 2 0 0 1-3-3l8-8"/></IconBase>);
+}
+function Sun(props) {
+  return (<IconBase {...props}><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.9 4.9l1.4 1.4"/><path d="M17.7 17.7l1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.9 19.1l1.4-1.4"/><path d="M17.7 6.3l1.4-1.4"/></IconBase>);
+}
+function Moon(props) {
+  return (<IconBase {...props}><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></IconBase>);
+}
+function AlertTriangle(props) {
+  return (<IconBase {...props}><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></IconBase>);
+}
+
+/* window.storage agora é configurado dinamicamente pelo app,
+   usando Firebase Firestore (ver configurarStorage em app.jsx) */
+
+
+/* ---------------------------------------------------------
+   Constantes
+--------------------------------------------------------- */
+
+const FASES = [
+  { key: "aberta", label: "Aberta" },
+  { key: "orcamento", label: "Orçamento" },
+  { key: "aprovada", label: "Aprovada" },
+  { key: "execucao", label: "Em execução" },
+  { key: "concluida", label: "Concluída" },
+];
+
+const CATEGORIAS_DEMANDA = ["Estrutural", "Elétrica", "Hidráulica", "Limpeza", "Segurança", "Jardinagem", "Elevadores", "Outros"];
+
+const PRIORIDADES = [
+  { key: "Baixa", color: "var(--text-muted)" },
+  { key: "Média", color: "var(--info)" },
+  { key: "Alta", color: "var(--warning)" },
+  { key: "Urgente", color: "var(--danger)" },
+];
+
+const CATEGORIAS_NORMA = ["Incêndio", "Elevadores", "Elétrica", "Estrutural", "Acessibilidade", "Geral"];
+
+const TIPOS_COMUNICADO = [
+  { key: "Comunicado", color: "var(--accent)" },
+  { key: "Aviso de Portaria", color: "var(--info)" },
+  { key: "Alerta Normativo", color: "var(--warning)" },
+];
+
+const STATUS_MANUTENCAO = [
+  { key: "Pendente", color: "var(--text-muted)" },
+  { key: "Em andamento", color: "var(--info)" },
+  { key: "Concluído", color: "var(--success)" },
+];
+
+const AZUL_ESCURO = "var(--blue-accent)";
+
+const NAV_ITEMS = [
+  { key: "dashboard", label: "Painel", icon: LayoutDashboard },
+  { key: "zeladoria", label: "Zeladoria", icon: ClipboardList },
+  { key: "normas", label: "Normas ABNT", icon: ShieldCheck },
+  { key: "obrigacoes", label: "Obrigações", icon: CalendarClock },
+  { key: "comunicados", label: "Comunicados", icon: Megaphone },
+  { key: "consumos", label: "Consumos", icon: Droplet },
+  { key: "notificacoes", label: "Notificações", icon: AlertTriangle },
+];
+
+function seedObrigacoesPeriodicas() {
+  const base = { fixo: true, dataRealizacao: null, dataVencimento: null, orcamento: "", empresaTelefone: "" };
+  return [
+    { id: "op1", nome: "Dedetização", ...base },
+    { id: "op2", nome: "Caixa d'água", ...base },
+    { id: "op3", nome: "Extintores/hidrantes", ...base },
+    { id: "op4", nome: "SPDA", ...base },
+    { id: "op5", nome: "Bombas", ...base },
+    { id: "op6", nome: "Elevadores", ...base },
+    { id: "op7", nome: "Portão", ...base },
+    { id: "op8", nome: "Jardinagem", ...base },
+    { id: "op9", nome: "Seguro Estrutural", ...base },
+    { id: "op10", nome: "Seguro de Colaboradores", ...base },
+  ];
+}
+
+function seedObrigacoesTrabalhistas() {
+  const base = { fixo: true, dataRealizacao: null, dataVencimento: null, orcamento: "", empresaTelefone: "" };
+  return [
+    { id: "ot1", nome: "LTCAT/PCMSO/PGR", ...base },
+    { id: "ot2", nome: "NRs/capacitações", ...base },
+    { id: "ot3", nome: "Exames ocupacionais", ...base },
+    { id: "ot4", nome: "ASO", ...base },
+    { id: "ot5", nome: "EPI/EPC", ...base },
+  ];
+}
+
+function seedLimpezaEscalas() {
+  const base = { fixo: true, dataRealizacao: null, dataVencimento: null, orcamento: "", empresaTelefone: "" };
+  return [
+    { id: "le1", nome: "Áreas comuns", ...base },
+    { id: "le2", nome: "Escadas e corredores", ...base },
+    { id: "le3", nome: "Garagem", ...base },
+    { id: "le4", nome: "Elevadores (cabines)", ...base },
+    { id: "le5", nome: "Vidros e fachada", ...base },
+    { id: "le6", nome: "Playground / área de lazer", ...base },
+  ];
+}
+
+function seedLimpezaEstoque() {
+  return [
+    { id: "ee1", item: "Detergente neutro", quantidade: 12, unidade: "un.", estoqueMinimo: 4, localizacao: "Depósito térreo" },
+    { id: "ee2", item: "Sacos de lixo 100L", quantidade: 8, unidade: "pct", estoqueMinimo: 3, localizacao: "Depósito térreo" },
+    { id: "ee3", item: "Álcool 70%", quantidade: 6, unidade: "un.", estoqueMinimo: 2, localizacao: "Depósito térreo" },
+    { id: "ee4", item: "Papel toalha", quantidade: 20, unidade: "un.", estoqueMinimo: 6, localizacao: "Almoxarifado" },
+  ];
+}
+
+function seedNormas() {
+  return [
+    { id: "n1", codigo: "NBR 12693", titulo: "Sistemas de proteção por extintores de incêndio", categoria: "Incêndio", periodicidadeMeses: 12, ultimaVerificacao: "2025-07-15", proximaVerificacao: "2026-07-15", observacoes: "Recarga e inspeção anual. Teste hidrostático a cada 5 anos.", resumoEducativo: "Define como dimensionar, instalar e manter extintores de incêndio. Na prática: os extintores de pó químico, CO2 ou água do seu condomínio precisam de inspeção visual mensal e recarga/teste periódico — geralmente uma vez por ano, conforme o prazo do fabricante." },
+    { id: "n2", codigo: "NBR 13714", titulo: "Sistemas de hidrantes e mangotinhos para combate a incêndio", categoria: "Incêndio", periodicidadeMeses: 12, ultimaVerificacao: "2025-09-10", proximaVerificacao: "2026-09-10", observacoes: "Verificar pressão, mangueiras e sinalização.", resumoEducativo: "Trata das caixas de hidrante e mangotinho espalhadas pelos corredores e garagem. Na prática: mangueira, registro e pressão da água precisam ser testados periodicamente, para garantir que funcionem de verdade numa emergência." },
+    { id: "n3", codigo: "NBR 9077", titulo: "Saídas de emergência em edifícios", categoria: "Estrutural", periodicidadeMeses: 12, ultimaVerificacao: "2025-09-05", proximaVerificacao: "2026-09-05", observacoes: "Revisar plano de rotas de fuga e sinalização fotoluminescente.", resumoEducativo: "Define como devem ser as rotas de fuga em caso de incêndio ou emergência — corredores, escadas, portas corta-fogo. Na prática: aquelas placas verdes que brilham no escuro (sinalização fotoluminescente) precisam estar visíveis, e as saídas nunca podem ficar obstruídas." },
+    { id: "n4", codigo: "NBR 16083", titulo: "Manutenção de elevadores", categoria: "Elevadores", periodicidadeMeses: 12, ultimaVerificacao: "2026-02-01", proximaVerificacao: "2027-02-01", observacoes: "Laudo anual, além da manutenção preventiva mensal do contrato.", resumoEducativo: "Regula a manutenção preventiva e corretiva de elevadores e seus equipamentos. Na prática: além da manutenção mensal do contrato com a empresa, é exigida uma inspeção anual formal (laudo) do elevador do condomínio." },
+    { id: "n5", codigo: "NBR 5410", titulo: "Instalações elétricas de baixa tensão", categoria: "Elétrica", periodicidadeMeses: 60, ultimaVerificacao: "2023-03-01", proximaVerificacao: "2028-03-01", observacoes: "Laudo técnico de instalações elétricas.", resumoEducativo: "Define os requisitos de segurança para instalações elétricas — fiação, aterramento, disjuntores. Na prática: um laudo técnico elétrico periódico verifica se o quadro de distribuição e a fiação do condomínio continuam seguros, sem risco de curto-circuito ou incêndio." },
+    { id: "n6", codigo: "NBR 5674", titulo: "Manutenção de edificações — requisitos para o sistema de gestão", categoria: "Geral", periodicidadeMeses: 12, ultimaVerificacao: "2026-01-10", proximaVerificacao: "2027-01-10", observacoes: "Revisão do plano de manutenção predial.", resumoEducativo: "É a norma \"guarda-chuva\" da manutenção predial: orienta como organizar rotinas, planejamento e registros de manutenção. Na prática: ajuda o síndico a manter um plano preventivo de toda a edificação, não só de itens isolados." },
+    { id: "n7", codigo: "NBR 6493", titulo: "Identificação de tubulações", categoria: "Geral", periodicidadeMeses: 24, ultimaVerificacao: "2024-11-01", proximaVerificacao: "2026-11-01", observacoes: "Conferir cores de identificação nas casas de máquinas.", resumoEducativo: "Padroniza as cores usadas para identificar o conteúdo das tubulações. Na prática: na casa de máquinas, os canos devem ter faixas coloridas — vermelho para incêndio, verde para água, por exemplo — facilitando a identificação em manutenções e emergências." },
+    { id: "n8", codigo: "NBR 15575", titulo: "Desempenho de edificações habitacionais", categoria: "Estrutural", periodicidadeMeses: 60, ultimaVerificacao: "2022-06-01", proximaVerificacao: "2027-06-01", observacoes: "Referência para vida útil de sistemas construtivos.", resumoEducativo: "Define os requisitos mínimos de desempenho e vida útil dos sistemas construtivos — estrutura, vedações, instalações. Na prática: serve de referência para saber quanto tempo se espera que durem itens como impermeabilização e revestimentos do prédio." },
+  ];
+}
+
+const MESES_PT = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+const TIPOS_CONSUMO = [
+  { key: "agua", label: "Água", emoji: "💧", unidade: "m³" },
+  { key: "energia", label: "Energia elétrica", emoji: "⚡", unidade: "kWh" },
+  { key: "gas", label: "Gás", emoji: "🔥", unidade: "m³" },
+  { key: "telefone", label: "Telefone/Internet", emoji: "📞", unidade: "" },
+  { key: "limpeza", label: "Limpeza", emoji: "🧹", unidade: "" },
+  { key: "manutencao", label: "Manutenção", emoji: "🔧", unidade: "" },
+];
+
+const INFRACOES = [
+  { id: "i1", titulo: "Acesso sem identificação ou sem crachá de veículo", penalidade: "Multa equivalente a ½ (metade) do valor da cota condominial ordinária vigente.", baseLegal: "Artigo 8º e Artigo 9º do Regimento Interno." },
+  { id: "i2", titulo: "Acesso ou alteração não autorizada de quadros nos halls", penalidade: "Multa equivalente a 1 (uma) cota condominial ordinária vigente.", baseLegal: "Artigo 60º do Regimento Interno." },
+  { id: "i3", titulo: "Avarias em lonas de cobertura de garagem sem manutenção no prazo", penalidade: "Sujeito à incidência de multa / multa condominial (natureza/valor geral conforme Art. 67, Parágrafo Segundo).", baseLegal: "Artigo 58º, Parágrafo Sexto do Regimento Interno." },
+  { id: "i4", titulo: "Circulação pelas dependências sem uso de camisa ou camiseta", penalidade: "Multa equivalente a 1 (uma) cota condominial vigente.", baseLegal: "Artigo 56º do Regimento Interno." },
+  { id: "i5", titulo: "Danos ao patrimônio por mau uso, estrago ou descaso", penalidade: "Ressarcimento imediato dos prejuízos + advertência por escrito ou outras penalidades do Corpo Diretivo.", baseLegal: "Artigo 45º do Regimento Interno." },
+  { id: "i6", titulo: "Desrespeito às sinalizações e direção de trânsito por veículos automotores", penalidade: "Multa equivalente a 1 (uma) cota condominial ordinária vigente (sem prévio aviso e com progressão aritmética em reincidência até 12 meses).", baseLegal: "Artigo 43º do Regimento Interno." },
+  { id: "i7", titulo: "Estacionar ou parar em local proibido (via interna/vagas demarcadas específicas) ou uso indevido dessas vagas", penalidade: "Multa no valor de 1 (uma) cota condominial ordinária.", baseLegal: "Artigo 59º, Parágrafo Terceiro do Regimento Interno." },
+  { id: "i8", titulo: "Excesso de velocidade com veículo (acima de 15 km/h)", penalidade: "Classificado como falta grave e sujeito a multa equivalente a 1 (uma) cota condominial ordinária vigente, sem prévia notificação de advertência.", baseLegal: "Artigo 42º e Artigo 57º do Regimento Interno." },
+  { id: "i9", titulo: "Forma inadequada de estacionar (não centralizado / fora das demarcações do solo)", penalidade: "Advertência e aplicação de multa equivalente a ½ (metade) do valor da cota condominial vigente.", baseLegal: "Artigo 58º, Parágrafo Sétimo do Regimento Interno." },
+  { id: "i10", titulo: "Infrações gerais leves sem valor especificado no texto", penalidade: "Notificação/multa com valor mínimo de ½ (meia) cota condominial ordinária vigente.", baseLegal: "Artigo 67º, Parágrafo Segundo do Regimento Interno." },
+  { id: "i11", titulo: "Infrações gerais graves sem valor especificado no texto", penalidade: "Notificação/multa com valor mínimo de 1 (uma) cota condominial ordinária vigente.", baseLegal: "Artigo 67º, Parágrafo Segundo do Regimento Interno." },
+  { id: "i12", titulo: "Infringir qualquer norma da Convenção ou do Regimento Interno (regra geral de apuração)", penalidade: "Notificação/advertência e cobrança de multa financeira somada à taxa condominial do mês seguinte.", baseLegal: "Artigo 53º e Parágrafo Único do Regimento Interno." },
+  { id: "i13", titulo: "Placas de anúncio e publicidade em áreas comuns/externas (natureza leve)", penalidade: "Notificação/multa de infração leve.", baseLegal: "Artigo 59º do Regimento Interno." },
+  { id: "i14", titulo: "Sujar áreas internas por movimentação de terras, entulhos ou produtos químicos e não limpar no mesmo dia", penalidade: "Classificado como falta grave (sujeito à multa de natureza grave).", baseLegal: "Artigo 52º do Regimento Interno." },
+  { id: "i15", titulo: "Trânsito de pedestres no perímetro em volta das torres 1 a 7", penalidade: "Notificação/multa por infração de natureza leve.", baseLegal: "Artigo 71º do Regimento Interno." },
+  { id: "i16", titulo: "Ultrapassagem do horário determinado para realização de mudanças", penalidade: "Multa equivalente a 1 (uma) cota condominial ordinária vigente.", baseLegal: "Artigo 22º, Parágrafo Único do Regimento Interno." },
+  { id: "i17", titulo: "Uso inadequado do elevador em transporte de mudanças/materiais (falta de travamento correto, etc.)", penalidade: "Multa equivalente a 1 (uma) cota condominial ordinária vigente.", baseLegal: "Artigo 24º, Parágrafo Segundo do Regimento Interno." },
+];
+
+/* ---------------------------------------------------------
+   Helpers
+--------------------------------------------------------- */
+
+const uid = () => Math.random().toString(36).slice(2, 10);
+
+/* ---------------------------------------------------------
+   Firebase (Auth + Firestore) — carregado em tempo de execução
+   via cdnjs, mesmo esquema já comprovado com jsPDF
+--------------------------------------------------------- */
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyAMVzWwwD1CdguaF13T4Qm6v0eqaaGAOlY",
+  authDomain: "gestao-jardim-paulista.firebaseapp.com",
+  projectId: "gestao-jardim-paulista",
+  storageBucket: "gestao-jardim-paulista.firebasestorage.app",
+  messagingSenderId: "798031019660",
+  appId: "1:798031019660:web:65d6019feeb2340f9985a9",
+};
+
+function carregarScript(src) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error("Falha ao carregar " + src));
+    document.head.appendChild(script);
+  });
+}
+
+let firebasePromise = null;
+function carregarFirebase() {
+  if (window.firebase && window.firebase.apps && window.firebase.apps.length) {
+    return Promise.resolve({ auth: window.firebase.auth(), db: window.firebase.firestore() });
+  }
+  if (firebasePromise) return firebasePromise;
+  const base = "https://cdnjs.cloudflare.com/ajax/libs/firebase/12.17.1/";
+  firebasePromise = (async () => {
+    if (!window.firebase) {
+      await carregarScript(base + "firebase-app-compat.min.js");
+    }
+    await Promise.all([
+      carregarScript(base + "firebase-auth-compat.min.js"),
+      carregarScript(base + "firebase-firestore-compat.min.js"),
+    ]);
+    if (!window.firebase.apps.length) {
+      window.firebase.initializeApp(FIREBASE_CONFIG);
+    }
+    return { auth: window.firebase.auth(), db: window.firebase.firestore() };
+  })().catch((e) => {
+    firebasePromise = null;
+    throw e;
+  });
+  return firebasePromise;
+}
+
+function configurarStorage(db, userId) {
+  const base = () => db.collection("usuarios").doc(userId).collection("dados");
+  window.storage = {
+    async get(key) {
+      const snap = await base().doc(key).get();
+      if (!snap.exists) throw new Error("chave não encontrada: " + key);
+      return { key, value: snap.data().value, shared: false };
+    },
+    async set(key, value) {
+      await base().doc(key).set({ value });
+      return { key, value, shared: false };
+    },
+    async delete(key) {
+      await base().doc(key).delete();
+      return { key, deleted: true, shared: false };
+    },
+    async list(prefix) {
+      const snap = await base().get();
+      const keys = snap.docs.map((d) => d.id).filter((k) => !prefix || k.startsWith(prefix));
+      return { keys, prefix, shared: false };
+    },
+  };
+}
+
+function traduzErroFirebase(e) {
+  const code = e && e.code;
+  const mapa = {
+    "auth/user-not-found": 'E-mail não cadastrado. Toque em "Criar conta".',
+    "auth/wrong-password": "Senha incorreta.",
+    "auth/invalid-credential": "E-mail ou senha incorretos.",
+    "auth/invalid-email": "E-mail inválido.",
+    "auth/too-many-requests": "Muitas tentativas. Aguarde um pouco e tente de novo.",
+    "auth/email-already-in-use": "Esse e-mail já tem conta — tente entrar em vez de criar.",
+    "auth/weak-password": "A senha precisa ter pelo menos 6 caracteres.",
+    "auth/popup-closed-by-user": "Login com Google cancelado.",
+    "auth/network-request-failed": "Falha de conexão. Verifique sua internet.",
+    "auth/unauthorized-domain": "Este endereço ainda não está autorizado no Firebase. Peça para adicionar o domínio em Authentication → Settings → Authorized domains.",
+    "auth/operation-not-supported-in-this-environment": "O login com Google não funciona abrindo o arquivo direto do computador/celular — publique o site (ex.: GitHub Pages) e acesse por esse link.",
+    "auth/operation-not-allowed": "O login com Google ainda não foi ativado no Firebase (Authentication → Sign-in method).",
+  };
+  return (code && mapa[code]) || "Não foi possível concluir agora. Tente novamente.";
+}
+
+const PARADAS_PT = new Set(["de", "da", "do", "das", "dos", "em", "no", "na", "nos", "nas", "que", "não", "se", "ao", "aos", "a", "o", "e", "ou", "com", "sem", "para", "por", "um", "uma", "uns", "umas", "é", "meu", "minha"]);
+
+function normalizarTexto(t) {
+  return (t || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function palavrasChave(t) {
+  return normalizarTexto(t)
+    .split(/[^a-z0-9çãõáéíóúâêô]+/i)
+    .filter((p) => p.length > 2 && !PARADAS_PT.has(p));
+}
+
+function buscarArtigoRegimento(pergunta) {
+  const termos = palavrasChave(pergunta);
+  if (termos.length === 0) return null;
+  let melhor = null;
+  let melhorPontuacao = 0;
+  for (const infra of INFRACOES) {
+    const palavrasInfra = new Set([...palavrasChave(infra.titulo), ...palavrasChave(infra.penalidade)]);
+    let pontuacao = 0;
+    for (const termo of termos) {
+      if (palavrasInfra.has(termo)) pontuacao += 1;
+      else {
+        for (const p of palavrasInfra) {
+          if (p.startsWith(termo) || termo.startsWith(p)) {
+            pontuacao += 0.5;
+            break;
+          }
+        }
+      }
+    }
+    if (pontuacao > melhorPontuacao) {
+      melhorPontuacao = pontuacao;
+      melhor = infra;
+    }
+  }
+  return melhorPontuacao > 0 ? melhor : null;
+}
+
+function responderGenio(pergunta) {
+  const achado = buscarArtigoRegimento(pergunta);
+  if (achado) {
+    return `Sobre isso, o Regimento Interno prevê:\n\n"${achado.titulo}"\n\nPenalidade: ${achado.penalidade}\n\nBase legal: ${achado.baseLegal}`;
+  }
+  return "Não encontrei um artigo cadastrado sobre esse assunto específico. Consulte diretamente o Regimento Interno do condomínio, ou cadastre esse item nas infrações da aba Notificações para que eu passe a reconhecê-lo.";
+}
+
+/* ---------------------------------------------------------
+   jsPDF (carregado em tempo de execução via cdnjs — mesma
+   origem já usada por React/ReactDOM/Babel, comprovadamente
+   confiável nos artefatos do Claude e fora deles)
+--------------------------------------------------------- */
+let jsPdfCarregando = null;
+function carregarJsPDF() {
+  if (window.jspdf && window.jspdf.jsPDF) return Promise.resolve(window.jspdf.jsPDF);
+  if (jsPdfCarregando) return jsPdfCarregando;
+  jsPdfCarregando = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
+    script.onload = () => {
+      if (window.jspdf && window.jspdf.jsPDF) resolve(window.jspdf.jsPDF);
+      else reject(new Error("jsPDF carregou mas não expôs window.jspdf.jsPDF"));
+    };
+    script.onerror = () => reject(new Error("Falha ao carregar jsPDF do CDN"));
+    document.head.appendChild(script);
+  });
+  return jsPdfCarregando;
+}
+
+function quebrarLinhas(doc, texto, larguraMax) {
+  return doc.splitTextToSize(texto, larguraMax);
+}
+
+async function gerarPdfNotificacao({ condominioNome, sindicoNome, bloco, apartamento, notificado, infracao, tipoDocumento, data }) {
+  const JsPDFClass = await carregarJsPDF();
+  const doc = new JsPDFClass({ unit: "mm", format: "a4" });
+  const margem = 20;
+  const largura = 210 - margem * 2;
+  let y = 25;
+
+  const titulo = tipoDocumento === "multa" ? "NOTIFICAÇÃO DE MULTA" : "NOTIFICAÇÃO / ADVERTÊNCIA";
+
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(14);
+  doc.text(condominioNome || "Condomínio", margem, y);
+  y += 8;
+  doc.setFontSize(12);
+  doc.text(titulo, margem, y);
+  y += 8;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  doc.text(`Síndico: ${sindicoNome || "—"}`, margem, y);
+  y += 6;
+  const textoAtribuicao =
+    "Na qualidade de Síndico(a) do condomínio, no exercício das atribuições previstas na Convenção " +
+    "Condominial, no Regimento Interno e no art. 1.348 do Código Civil, expede a presente notificação em " +
+    "nome da administração condominial.";
+  quebrarLinhas(doc, textoAtribuicao, largura).forEach((l) => {
+    doc.text(l, margem, y);
+    y += 5;
+  });
+  y += 4;
+
+  doc.setDrawColor(180);
+  doc.line(margem, y, 210 - margem, y);
+  y += 8;
+
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(11);
+  const dataFmt = formatDate(data);
+  const linhasDados = [
+    `Data: ${dataFmt}`,
+    `Bloco: ${bloco || "—"}      Apartamento: ${apartamento || "—"}`,
+    `Notificado(a): ${notificado || "—"}`,
+  ];
+  linhasDados.forEach((l) => {
+    doc.text(l, margem, y);
+    y += 7;
+  });
+  y += 4;
+
+  doc.setFont("helvetica", "bold");
+  doc.text("Descrição da infração", margem, y);
+  y += 7;
+  doc.setFont("helvetica", "normal");
+  quebrarLinhas(doc, infracao.titulo, largura).forEach((l) => {
+    doc.text(l, margem, y);
+    y += 6;
+  });
+  y += 4;
+
+  if (tipoDocumento === "multa") {
+    doc.setFont("helvetica", "bold");
+    doc.text("Penalidade", margem, y);
+    y += 7;
+    doc.setFont("helvetica", "normal");
+    quebrarLinhas(doc, infracao.penalidade, largura).forEach((l) => {
+      doc.text(l, margem, y);
+      y += 6;
+    });
+    y += 4;
+  }
+
+  doc.setFont("helvetica", "bold");
+  doc.text("Base legal", margem, y);
+  y += 7;
+  doc.setFont("helvetica", "normal");
+  quebrarLinhas(doc, infracao.baseLegal, largura).forEach((l) => {
+    doc.text(l, margem, y);
+    y += 6;
+  });
+  y += 6;
+
+  if (tipoDocumento === "multa") {
+    const textoFormal =
+      "Pelo presente instrumento, o Condomínio comunica que foi constatada a infração acima descrita ao " +
+      "Regimento Interno e/ou Convenção Condominial, ficando o(a) notificado(a) ciente da penalidade e da base " +
+      "legal aplicáveis. Fica assegurado o direito de manifestação junto ao Síndico ou ao Corpo Diretivo, no " +
+      "prazo regimental, apresentando os esclarecimentos que julgar cabíveis. Não havendo manifestação ou " +
+      "regularização no prazo, a penalidade será processada normalmente, inclusive com cobrança na cota " +
+      "condominial subsequente, quando aplicável.";
+    quebrarLinhas(doc, textoFormal, largura).forEach((l) => {
+      doc.text(l, margem, y);
+      y += 6;
+    });
+  } else {
+    doc.setFont("helvetica", "bold");
+    doc.text("DA NOTIFICAÇÃO", margem, y);
+    y += 7;
+    doc.setFont("helvetica", "normal");
+    const textoNotificacao =
+      "Diante do exposto, fica Vossa Senhoria FORMALMENTE NOTIFICADA para que observe integralmente as " +
+      "normas previstas no Regimento Interno do Condomínio, abstendo-se da repetição das condutas acima " +
+      "descritas. Esta comunicação possui caráter exclusivamente orientativo e preventivo, tendo por " +
+      "finalidade preservar a segurança, a organização e o cumprimento das normas condominiais. A presente " +
+      "NOTIFICAÇÃO NÃO CONSTITUI MULTA, não gerando, neste momento, qualquer penalidade pecuniária. " +
+      "Havendo reincidência, novas ocorrências não serão mais tratadas mediante notificação, ficando " +
+      "sujeitas à aplicação das penalidades previstas.";
+    quebrarLinhas(doc, textoNotificacao, largura).forEach((l) => {
+      doc.text(l, margem, y);
+      y += 6;
+    });
+    y += 6;
+
+    doc.setFont("helvetica", "bold");
+    doc.text("DO DIREITO À DEFESA", margem, y);
+    y += 7;
+    doc.setFont("helvetica", "normal");
+    const textoDefesa =
+      "A notificada tem o prazo de 05 (cinco) dias, contados do recebimento desta Notificação, para " +
+      "apresentação de defesa por escrito perante a Administração do Condomínio, caso entenda pertinente.";
+    quebrarLinhas(doc, textoDefesa, largura).forEach((l) => {
+      doc.text(l, margem, y);
+      y += 6;
+    });
+  }
+
+  y += 22;
+  const meioX = 210 / 2;
+  doc.line(margem, y, meioX - 5, y);
+  doc.line(meioX + 5, y, 210 - margem, y);
+  y += 5;
+  doc.setFontSize(10);
+  doc.text("Síndico(a)", margem + 12, y);
+  doc.text("Notificado(a) — Ciente", meioX + 12, y);
+
+  const nomeArquivo = `${tipoDocumento === "multa" ? "multa" : "notificacao"}-${(notificado || "morador").toLowerCase().replace(/\s+/g, "-")}-${data}.pdf`;
+  const dataUrl = doc.output("datauristring");
+  doc.save(nomeArquivo);
+  return { dataUrl, nomeArquivo };
+}
+
+function formatDate(d) {
+  if (!d) return "—";
+  const dt = new Date(d + "T00:00:00");
+  if (isNaN(dt)) return d;
+  return dt.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
+}
+
+function todayISO() {
+  const d = new Date();
+  return d.toISOString().slice(0, 10);
+}
+
+function diaDoAno(date) {
+  const inicio = new Date(date.getFullYear(), 0, 0);
+  const diff = date - inicio;
+  return Math.floor(diff / 86400000);
+}
+
+function daysUntil(dateStr) {
+  const target = new Date(dateStr + "T00:00:00");
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  return Math.round((target - now) / 86400000);
+}
+
+function normaStatus(norma) {
+  const d = daysUntil(norma.proximaVerificacao);
+  if (d < 0) return { key: "vencido", label: `Vencida há ${Math.abs(d)}d`, color: "var(--danger)" };
+  if (d <= 30) return { key: "alerta", label: `Vence em ${d}d`, color: "var(--warning)" };
+  return { key: "ok", label: `Em dia (${d}d)`, color: "var(--success)" };
+}
+
+function obrigacaoStatus(item) {
+  if (!item.dataVencimento) return { key: "pendente", label: "Sem data cadastrada", color: "var(--text-muted)" };
+  const d = daysUntil(item.dataVencimento);
+  if (d < 0) return { key: "vencido", label: `Vencido há ${Math.abs(d)} dia${Math.abs(d) === 1 ? "" : "s"}`, color: "var(--danger)" };
+  if (d <= 30) return { key: "alerta", label: `Faltam ${d} dia${d === 1 ? "" : "s"} para vencer`, color: "var(--warning)" };
+  return { key: "ok", label: `Faltam ${d} dias para vencer`, color: "var(--success)" };
+}
+
+function formatMesAno(mesAno) {
+  if (!mesAno) return "";
+  const [ano, mes] = mesAno.split("-");
+  const idx = parseInt(mes, 10) - 1;
+  return `${MESES_PT[idx] || mes}/${ano}`;
+}
+
+function formatMoeda(v) {
+  const n = Number(v) || 0;
+  return "R$ " + n.toLocaleString("pt-BR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+}
+
+function formatVariacao(v) {
+  if (v === null || v === undefined || !isFinite(v)) return null;
+  const sinal = v >= 0 ? "+" : "";
+  return sinal + v.toFixed(1).replace(".", ",") + "%";
+}
+
+function corVariacao(v) {
+  if (v === null || v === undefined || !isFinite(v)) return "var(--text-muted)";
+  if (v > 0) return "var(--warning)";
+  if (v < 0) return "var(--success)";
+  return "var(--text-muted)";
+}
+
+function calcularVariacaoValor(consumos, entryAtual) {
+  const anteriores = consumos
+    .filter((c) => c.id !== entryAtual.id && c.tipo === entryAtual.tipo && (entryAtual.tipo !== "energia" || c.bloco === entryAtual.bloco) && c.mesAno < entryAtual.mesAno)
+    .sort((a, b) => (a.mesAno < b.mesAno ? 1 : -1));
+  const anterior = anteriores[0];
+  if (!anterior || !anterior.valor) return null;
+  return ((entryAtual.valor - anterior.valor) / anterior.valor) * 100;
+}
+
+async function persist(key, value) {
+  try {
+    await window.storage.set(key, JSON.stringify(value), false);
+  } catch (e) {
+    console.error("Falha ao salvar", key, e);
+  }
+}
+
+async function load(key, fallback) {
+  try {
+    const res = await window.storage.get(key, false);
+    if (res && res.value) return JSON.parse(res.value);
+    return fallback;
+  } catch (e) {
+    return fallback;
+  }
+}
+
+/* ---------------------------------------------------------
+   Componentes pequenos
+--------------------------------------------------------- */
+
+function Pill({ color, children }) {
+  return (
+    <span
+      className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium"
+      style={{ backgroundColor: color + "22", color }}
+    >
+      <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: color }} />
+      {children}
+    </span>
+  );
+}
+
+function StatCard({ label, value, icon: Icon, accent }) {
+  return (
+    <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-4 flex items-center gap-3 shadow-lg shadow-black/20">
+      <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: accent + "1E" }}>
+        <Icon size={18} style={{ color: accent }} />
+      </div>
+      <div>
+        <div className="text-2xl font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{value}</div>
+        <div className="text-xs text-[var(--text-secondary)]">{label}</div>
+      </div>
+    </div>
+  );
+}
+
+function EmptyState({ text, actionLabel, onAction }) {
+  return (
+    <div className="border border-dashed border-[var(--border)] rounded-xl py-10 px-6 text-center">
+      <p className="text-sm text-[var(--text-secondary)] mb-3">{text}</p>
+      {actionLabel && (
+        <button onClick={onAction} className="text-sm font-medium text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors">
+          {actionLabel} →
+        </button>
+      )}
+    </div>
+  );
+}
+
+function Modal({ title, onClose, children }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-0 sm:p-4">
+      <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-t-2xl sm:rounded-2xl w-full sm:max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl shadow-black/40">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-[var(--border)] sticky top-0 bg-[var(--bg-card)]">
+          <h3 className="text-[var(--text-primary)] font-semibold" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{title}</h3>
+          <button onClick={onClose} className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">
+            <X size={20} />
+          </button>
+        </div>
+        <div className="p-5">{children}</div>
+      </div>
+    </div>
+  );
+}
+
+function Field({ label, children }) {
+  return (
+    <label className="block mb-4">
+      <span className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">{label}</span>
+      {children}
+    </label>
+  );
+}
+
+const inputCls = "w-full bg-[var(--bg)] border border-[var(--border)] rounded-lg px-3 py-2 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-50)] focus:border-[var(--accent)]";
+
+/* ---------------------------------------------------------
+   Placa de norma (elemento de assinatura visual)
+--------------------------------------------------------- */
+
+function PlacaNorma({ norma, onVerificar, onEdit, onDelete }) {
+  const status = normaStatus(norma);
+  return (
+    <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden shadow-lg shadow-black/20">
+      <div className="absolute left-0 top-0 bottom-0 w-1.5" style={{ backgroundColor: status.color }} />
+      <div className="pl-5 pr-4 py-4">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <span
+                className="text-[13px] font-semibold tracking-wide px-2 py-0.5 rounded border border-[var(--border)] text-[var(--accent-hover)]"
+                style={{ fontFamily: "'JetBrains Mono', monospace" }}
+              >
+                {norma.codigo}
+              </span>
+              <span className="text-[11px] text-[var(--text-muted)] uppercase tracking-wider">{norma.categoria}</span>
+            </div>
+            <p className="text-sm text-[var(--text-primary)] font-medium leading-snug">{norma.titulo}</p>
+          </div>
+          <div className="flex gap-1 shrink-0">
+            <button onClick={() => onEdit(norma)} className="text-[var(--text-muted)] hover:text-[var(--text-primary)] p-1"><Pencil size={14} /></button>
+            <button onClick={() => onDelete(norma.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1"><Trash2 size={14} /></button>
+          </div>
+        </div>
+        {norma.observacoes && <p className="text-xs text-[var(--text-secondary)] mt-2">{norma.observacoes}</p>}
+        <div className="flex items-center justify-between mt-3 pt-3 border-t border-[var(--border-soft)]">
+          <Pill color={status.color}>{status.label}</Pill>
+          <button onClick={() => onVerificar(norma)} className="text-xs font-medium text-[var(--accent)] hover:text-[var(--accent-hover)]">
+            Marcar verificado hoje
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   Norma ABNT do dia (flashcard educativo do Painel)
+--------------------------------------------------------- */
+
+function NormaDoDiaCard({ normas, onVerTodas }) {
+  const candidatas = normas.filter((n) => n.resumoEducativo);
+  if (candidatas.length === 0) return null;
+  const idx = diaDoAno(new Date()) % candidatas.length;
+  const norma = candidatas[idx];
+
+  return (
+    <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-5 shadow-lg shadow-black/20">
+      <div className="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-[var(--accent-15)] pointer-events-none" />
+      <div className="relative flex items-start gap-3 mb-3">
+        <div className="w-11 h-11 rounded-2xl bg-[var(--accent-15)] border border-[var(--accent-30)] flex items-center justify-center shrink-0">
+          <ShieldCheck size={20} className="text-[var(--accent)]" />
+        </div>
+        <div className="min-w-0 pt-0.5">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent)]">Norma ABNT do dia</p>
+          <div className="flex items-center gap-2 mt-1.5 flex-wrap">
+            <span
+              className="text-xs font-semibold px-2 py-0.5 rounded-md border border-[var(--border)] text-[var(--accent-hover)]"
+              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            >
+              {norma.codigo}
+            </span>
+            <span className="text-[11px] text-[var(--text-muted)] uppercase tracking-wide">{norma.categoria}</span>
+          </div>
+        </div>
+      </div>
+      <p className="relative text-sm text-[var(--text-primary)] font-semibold leading-snug">{norma.titulo}</p>
+      <p className="relative text-sm text-[var(--text-body)] leading-relaxed mt-2">{norma.resumoEducativo}</p>
+      <button onClick={onVerTodas} className="relative mt-4 text-xs font-medium text-[var(--accent)] hover:text-[var(--accent-hover)] flex items-center gap-1">
+        Ver todas as normas <ArrowRight size={12} />
+      </button>
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   Cartão de demanda
+--------------------------------------------------------- */
+
+function OrcamentoDemandaModal({ itensIniciais, onClose, onSave }) {
+  const [itens, setItens] = useState(itensIniciais.length > 0 ? itensIniciais.map((it) => ({ ...it })) : [{ item: "", valor: "" }]);
+
+  function atualizarItem(i, campo, valor) {
+    setItens((prev) => prev.map((it, idx) => (idx === i ? { ...it, [campo]: valor } : it)));
+  }
+  function adicionarLinha() {
+    setItens((prev) => [...prev, { item: "", valor: "" }]);
+  }
+  function removerLinha(i) {
+    setItens((prev) => prev.filter((_, idx) => idx !== i));
+  }
+
+  const total = itens.reduce((soma, it) => soma + (Number(it.valor) || 0), 0);
+
+  return (
+    <Modal title="Orçamento da demanda" onClose={onClose}>
+      <div className="space-y-2 mb-3">
+        {itens.map((it, i) => (
+          <div key={i} className="flex items-center gap-2">
+            <input
+              className={inputCls}
+              value={it.item}
+              onChange={(e) => atualizarItem(i, "item", e.target.value)}
+              placeholder="Item"
+            />
+            <input
+              type="number"
+              className={inputCls + " max-w-[110px]"}
+              value={it.valor}
+              onChange={(e) => atualizarItem(i, "valor", e.target.value)}
+              placeholder="R$"
+            />
+            <button onClick={() => removerLinha(i)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1 shrink-0">
+              <X size={16} />
+            </button>
+          </div>
+        ))}
+      </div>
+      <button
+        onClick={adicionarLinha}
+        className="flex items-center gap-1.5 text-sm text-[var(--accent)] hover:text-[var(--accent-hover)] mb-4"
+      >
+        <Plus size={15} /> Adicionar item
+      </button>
+      <div className="flex items-center justify-between border-t border-[var(--border-soft)] pt-3 mb-4">
+        <span className="text-sm text-[var(--text-secondary)]">Total</span>
+        <span className="text-base font-semibold text-[var(--text-primary)]">{formatMoeda(total)}</span>
+      </div>
+      <button
+        onClick={() => onSave(itens.filter((it) => it.item.trim() || it.valor !== ""))}
+        className="w-full bg-[var(--accent)] text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm"
+      >
+        Salvar orçamento
+      </button>
+    </Modal>
+  );
+}
+
+function DemandaCard({ demanda, onSetFase, onCancelar, onAddHistorico, onDelete, onSaveOrcamento }) {
+  const [showHist, setShowHist] = useState(false);
+  const [novaNota, setNovaNota] = useState("");
+  const [showOrcamento, setShowOrcamento] = useState(false);
+  const prioridade = PRIORIDADES.find((p) => p.key === demanda.prioridade) || PRIORIDADES[0];
+  const faseIdx = FASES.findIndex((f) => f.key === demanda.fase);
+  const atrasada = demanda.prazo && !demanda.cancelada && demanda.fase !== "concluida" && daysUntil(demanda.prazo) < 0;
+  const totalOrcamento = (demanda.orcamentoItens || []).reduce((soma, it) => soma + (Number(it.valor) || 0), 0);
+
+  return (
+    <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-4 shadow-lg shadow-black/20">
+      <div className="flex items-start justify-between gap-3 mb-3">
+        <div>
+          <div className="flex items-center gap-2 flex-wrap mb-1">
+            <Pill color={prioridade.color}>{demanda.prioridade}</Pill>
+            <span className="text-[11px] text-[var(--text-muted)] uppercase tracking-wider">{demanda.categoria}</span>
+            {atrasada && <Pill color="var(--danger)">Prazo vencido</Pill>}
+            {demanda.cancelada && <Pill color="var(--text-muted)">Cancelada</Pill>}
+          </div>
+          <h4 className="text-sm font-semibold text-[var(--text-primary)]">{demanda.titulo}</h4>
+          {demanda.local && (
+            <div className="flex items-center gap-1 text-xs text-[var(--text-secondary)] mt-1">
+              <MapPin size={12} /> {demanda.local}
+            </div>
+          )}
+        </div>
+        <button onClick={() => onDelete(demanda.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1 shrink-0">
+          <Trash2 size={14} />
+        </button>
+      </div>
+
+      {demanda.descricao && <p className="text-xs text-[var(--text-secondary)] mb-3">{demanda.descricao}</p>}
+
+      {!demanda.cancelada && (
+        <div className="flex items-center gap-0.5 mb-3 overflow-x-auto pb-1">
+          {FASES.map((f, i) => (
+            <React.Fragment key={f.key}>
+              <button
+                onClick={() => onSetFase(demanda.id, f.key)}
+                className="text-[10px] font-medium px-2 py-1 rounded whitespace-nowrap transition-colors"
+                style={{
+                  backgroundColor: i <= faseIdx ? "var(--accent)" : "var(--bg-card-alt)",
+                  color: i <= faseIdx ? "var(--accent-contrast)" : "var(--text-muted)",
+                }}
+              >
+                {f.label}
+              </button>
+              {i < FASES.length - 1 && <ChevronRight size={12} className="text-[var(--text-faint)] shrink-0" />}
+            </React.Fragment>
+          ))}
+        </div>
+      )}
+
+      <div className="flex items-center justify-between text-xs text-[var(--text-secondary)]">
+        <div className="flex items-center gap-3 flex-wrap">
+          {demanda.responsavel && (
+            <span className="flex items-center gap-1"><User size={12} /> {demanda.responsavel}</span>
+          )}
+          {demanda.prazo && (
+            <span className="flex items-center gap-1"><Calendar size={12} /> {formatDate(demanda.prazo)}</span>
+          )}
+        </div>
+        <div className="flex items-center gap-3">
+          {!demanda.cancelada && demanda.fase !== "concluida" && (
+            <button onClick={() => onCancelar(demanda.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)]">
+              Cancelar
+            </button>
+          )}
+          <button onClick={() => setShowOrcamento(true)} className="text-[var(--accent)] hover:text-[var(--accent-hover)]">
+            Orçamento{totalOrcamento > 0 ? ` (${formatMoeda(totalOrcamento)})` : ""}
+          </button>
+          <button onClick={() => setShowHist((s) => !s)} className="text-[var(--accent)] hover:text-[var(--accent-hover)]">
+            Histórico ({demanda.historico?.length || 0})
+          </button>
+        </div>
+      </div>
+
+      {showOrcamento && (
+        <OrcamentoDemandaModal
+          itensIniciais={demanda.orcamentoItens || []}
+          onClose={() => setShowOrcamento(false)}
+          onSave={(itens) => {
+            onSaveOrcamento(demanda.id, itens);
+            setShowOrcamento(false);
+          }}
+        />
+      )}
+
+      {showHist && (
+        <div className="mt-3 pt-3 border-t border-[var(--border-soft)]">
+          <div className="space-y-2 mb-3 max-h-40 overflow-y-auto">
+            {[...(demanda.historico || [])].reverse().map((h, i) => (
+              <div key={i} className="text-xs">
+                <span className="text-[var(--text-muted)]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>{formatDate(h.data)}</span>
+                <span className="text-[var(--text-body)] ml-2">{h.texto}</span>
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <input
+              value={novaNota}
+              onChange={(e) => setNovaNota(e.target.value)}
+              placeholder="Adicionar atualização..."
+              className={inputCls + " flex-1"}
+            />
+            <button
+              onClick={() => {
+                if (!novaNota.trim()) return;
+                onAddHistorico(demanda.id, novaNota.trim());
+                setNovaNota("");
+              }}
+              className="bg-[var(--accent)] text-[var(--accent-contrast)] text-xs font-semibold px-3 rounded-lg"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   Cartão de prazo
+--------------------------------------------------------- */
+
+function ObrigacaoCard({ item, onSave, onDelete }) {
+  const [expanded, setExpanded] = useState(false);
+  const [realizacao, setRealizacao] = useState(item.dataRealizacao || "");
+  const [vencimento, setVencimento] = useState(item.dataVencimento || "");
+  const [orcamento, setOrcamento] = useState(item.orcamento || "");
+  const [empresaTelefone, setEmpresaTelefone] = useState(item.empresaTelefone || "");
+  const status = obrigacaoStatus(item);
+  const temDatas = !!(item.dataRealizacao && item.dataVencimento);
+
+  useEffect(() => {
+    setRealizacao(item.dataRealizacao || "");
+    setVencimento(item.dataVencimento || "");
+    setOrcamento(item.orcamento || "");
+    setEmpresaTelefone(item.empresaTelefone || "");
+  }, [item.dataRealizacao, item.dataVencimento, item.orcamento, item.empresaTelefone]);
+
+  return (
+    <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden shadow-lg shadow-black/20">
+      <div className="absolute left-0 top-0 bottom-0 w-1.5" style={{ backgroundColor: status.color }} />
+      <button
+        onClick={() => setExpanded((s) => !s)}
+        className="w-full text-left pl-5 pr-4 py-4 flex items-center justify-between gap-3"
+      >
+        <div>
+          <p className="text-sm text-[var(--text-primary)] font-medium">{item.nome}</p>
+          {temDatas ? (
+            <p className="text-[11px] text-[var(--text-muted)] mt-1" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+              Realizado {formatDate(item.dataRealizacao)} · Vence {formatDate(item.dataVencimento)}
+            </p>
+          ) : (
+            <p className="text-[11px] text-[var(--text-muted)] mt-1">Toque para cadastrar</p>
+          )}
+          {item.empresaTelefone && <p className="text-[11px] text-[var(--text-secondary)] mt-0.5">{item.empresaTelefone}</p>}
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <Pill color={status.color}>{status.label}</Pill>
+          {expanded ? <ChevronLeft size={16} className="text-[var(--text-muted)] rotate-90" /> : <ChevronRight size={16} className="text-[var(--text-muted)]" />}
+        </div>
+      </button>
+
+      {expanded && (
+        <div className="px-5 pb-4 pt-1 border-t border-[var(--border-soft)]">
+          <Field label="Data de realização do serviço">
+            <input type="date" className={inputCls} value={realizacao} onChange={(e) => setRealizacao(e.target.value)} />
+          </Field>
+          {realizacao && (
+            <Field label="Data de vencimento da validade">
+              <input type="date" className={inputCls} value={vencimento} onChange={(e) => setVencimento(e.target.value)} />
+            </Field>
+          )}
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="Orçamento">
+              <input className={inputCls} value={orcamento} onChange={(e) => setOrcamento(e.target.value)} placeholder="R$" />
+            </Field>
+            <Field label="Empresa e telefone">
+              <input className={inputCls} value={empresaTelefone} onChange={(e) => setEmpresaTelefone(e.target.value)} placeholder="Nome — (00) 00000-0000" />
+            </Field>
+          </div>
+          <div className="flex items-center gap-2 mt-1">
+            <button
+              disabled={!realizacao || !vencimento}
+              onClick={() => {
+                onSave(item.id, { dataRealizacao: realizacao, dataVencimento: vencimento, orcamento, empresaTelefone });
+                setExpanded(false);
+              }}
+              className="flex-1 bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2 rounded-lg text-sm"
+            >
+              Salvar
+            </button>
+            <button onClick={() => onDelete(item.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-2">
+              <Trash2 size={16} />
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   Fontes / auth / seleção de condomínio
+--------------------------------------------------------- */
+
+function FontStyle() {
+  return (
+    <style>{`
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+      :root {
+        --bg: #121729;
+        --bg-header-95: rgba(18,23,41,0.95);
+        --bg-card: #1A2138;
+        --bg-card-alt: #212A47;
+        --border: #303B58;
+        --border-soft: #242C46;
+        --text-primary: #ECEFF7;
+        --text-body: #C3CBDE;
+        --text-secondary: #9AA6C0;
+        --text-muted: #7883A0;
+        --text-faint: #5B6580;
+        --accent: #4FD1C5;
+        --accent-contrast: #12172A;
+        --accent-hover: #7EE0D6;
+        --accent-15: rgba(79,209,197,0.15);
+        --accent-30: rgba(79,209,197,0.30);
+        --accent-50: rgba(79,209,197,0.50);
+        --blue-accent: #7C93F0;
+        --danger: #E8918D;
+        --warning: #EFC373;
+        --success: #6FD9A8;
+        --info: #7EC1E8;
+        --purple: #B9A6F2;
+        --danger-15: rgba(232,145,141,0.15);
+        --warning-15: rgba(239,195,115,0.15);
+        --warning-40: rgba(239,195,115,0.40);
+      }
+      [data-theme="claro"] {
+        --bg: #F5F7FB;
+        --bg-header-95: rgba(245,247,251,0.95);
+        --bg-card: #FFFFFF;
+        --bg-card-alt: #EEF1F8;
+        --border: #E1E5F0;
+        --border-soft: #EAEDF5;
+        --text-primary: #1E2536;
+        --text-body: #3D465C;
+        --text-secondary: #5B6478;
+        --text-muted: #838DA3;
+        --text-faint: #A6AEBD;
+        --accent: #14B8A6;
+        --accent-contrast: #FFFFFF;
+        --accent-hover: #0F9C8C;
+        --accent-15: rgba(20,184,166,0.12);
+        --accent-30: rgba(20,184,166,0.25);
+        --accent-50: rgba(20,184,166,0.45);
+        --blue-accent: #4C63D2;
+        --danger: #D9645F;
+        --warning: #C88A22;
+        --success: #2FAE72;
+        --info: #3B92C7;
+        --purple: #8C74E0;
+        --danger-15: rgba(217,100,95,0.12);
+        --warning-15: rgba(200,138,34,0.12);
+        --warning-40: rgba(200,138,34,0.35);
+      }
+      html, body { background: var(--bg); transition: background-color 0.2s ease; }
+      * { transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease; }
+      ::-webkit-scrollbar { height: 6px; width: 6px; }
+      ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    `}</style>
+  );
+}
+
+function GenioFace({ acordado, size = 32 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64">
+      <defs>
+        <linearGradient id="genioGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#7C93F0" />
+          <stop offset="55%" stopColor="#4FD1C5" />
+          <stop offset="100%" stopColor="#B9A6F2" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="32" cy="58" rx="14" ry="4" fill="#4FD1C5" opacity="0.25" />
+      <path d="M20 30 Q32 8 44 30 Q46 44 32 50 Q18 44 20 30 Z" fill="url(#genioGrad)" />
+      <path d="M24 22 Q32 6 40 22 Q34 18 32 18 Q30 18 24 22 Z" fill="#7C93F0" />
+      <circle cx="32" cy="14" r="3" fill="#EFC373" />
+      {acordado ? (
+        <>
+          <circle cx="26" cy="32" r="2.6" fill="#12172A" />
+          <circle cx="38" cy="32" r="2.6" fill="#12172A" />
+          <path d="M27 41 Q32 45 37 41" stroke="#12172A" strokeWidth="2" fill="none" strokeLinecap="round" />
+        </>
+      ) : (
+        <>
+          <path d="M23 32 Q26 34.5 29 32" stroke="#12172A" strokeWidth="2" fill="none" strokeLinecap="round" />
+          <path d="M35 32 Q38 34.5 41 32" stroke="#12172A" strokeWidth="2" fill="none" strokeLinecap="round" />
+          <path d="M28 41 Q32 42.5 36 41" stroke="#12172A" strokeWidth="1.6" fill="none" strokeLinecap="round" opacity="0.7" />
+          <text x="44" y="20" fontSize="9" fill="#9AA6C0">z</text>
+          <text x="49" y="14" fontSize="7" fill="#9AA6C0">z</text>
+        </>
+      )}
+    </svg>
+  );
+}
+
+function GenioChat({ mensagens, input, onInputChange, onEnviar, onFechar }) {
+  return (
+    <div className="fixed bottom-20 left-4 z-50 w-[92vw] max-w-sm bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl shadow-2xl shadow-black/40 flex flex-col overflow-hidden" style={{ maxHeight: "70vh" }}>
+      <div className="flex items-center gap-2.5 px-4 py-3 border-b border-[var(--border-soft)] bg-[var(--bg-card-alt)]">
+        <GenioFace acordado size={30} />
+        <div>
+          <p className="text-sm font-semibold text-[var(--text-primary)]">Gênio do Regimento</p>
+          <p className="text-[11px] text-[var(--text-muted)]">Pergunte sobre o Regimento Interno</p>
+        </div>
+      </div>
+      <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3" style={{ minHeight: 180 }}>
+        {mensagens.map((m, i) => (
+          <div key={i} className={"flex " + (m.autor === "usuario" ? "justify-end" : "justify-start")}>
+            <div
+              className="max-w-[85%] text-sm px-3 py-2 rounded-xl whitespace-pre-line leading-relaxed"
+              style={{
+                backgroundColor: m.autor === "usuario" ? "var(--accent)" : "var(--bg-card-alt)",
+                color: m.autor === "usuario" ? "var(--accent-contrast)" : "var(--text-primary)",
+                border: m.autor === "usuario" ? "none" : "1px solid var(--border-soft)",
+              }}
+            >
+              {m.texto}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="px-3 pt-2 pb-3 border-t border-[var(--border-soft)]">
+        <div className="flex items-center gap-2 mb-2">
+          <input
+            className={inputCls}
+            value={input}
+            onChange={(e) => onInputChange(e.target.value)}
+            onKeyDown={(e) => { if (e.key === "Enter") onEnviar(); }}
+            placeholder="Ex.: varal na sacada, crachá..."
+          />
+          <button onClick={onEnviar} className="bg-[var(--accent)] text-[var(--accent-contrast)] rounded-lg px-3 py-2 shrink-0">
+            <ArrowRight size={16} />
+          </button>
+        </div>
+        <div className="flex justify-end">
+          <button onClick={onFechar} className="text-xs font-medium text-[var(--text-muted)] hover:text-[var(--danger)]">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GenioWidget({ aberto, onToggle, mensagens, input, onInputChange, onEnviar, onFechar }) {
+  return (
+    <>
+      {aberto && <GenioChat mensagens={mensagens} input={input} onInputChange={onInputChange} onEnviar={onEnviar} onFechar={onFechar} />}
+      <button
+        onClick={onToggle}
+        className="fixed bottom-4 left-4 z-50 w-14 h-14 rounded-full bg-[var(--bg-card)] border border-[var(--border)] shadow-2xl shadow-black/40 flex items-center justify-center hover:scale-105 transition-transform"
+        title="Gênio do Regimento"
+      >
+        <GenioFace acordado={aberto} size={38} />
+      </button>
+    </>
+  );
+}
+
+function LoadingScreen({ text, tema }) {
+  return (
+    <div data-theme={tema} className="min-h-screen bg-[var(--bg)] flex items-center justify-center" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <FontStyle />
+      <div className="text-[var(--text-secondary)] text-sm">{text}</div>
+    </div>
+  );
+}
+
+function GoogleG({ size = 16 }) {
+  return (
+    <span
+      className="inline-flex items-center justify-center rounded-full font-bold shrink-0"
+      style={{
+        width: size,
+        height: size,
+        fontSize: size * 0.7,
+        background: "conic-gradient(from 180deg, #4285F4, #34A853, #FBBC05, #EA4335, #4285F4)",
+        color: "#fff",
+      }}
+    >
+      G
+    </span>
+  );
+}
+
+function LoginScreen({ onLogin, onLoginGoogle, onCriarConta, tema, onAlternarTema, erroInicial }) {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [erro, setErro] = useState(erroInicial || "");
+  const [carregando, setCarregando] = useState(false);
+
+  useEffect(() => {
+    if (erroInicial) setErro(erroInicial);
+  }, [erroInicial]);
+
+  async function entrar() {
+    if (!email.trim() || !senha) {
+      setErro("Informe e-mail e senha para continuar.");
+      return;
+    }
+    setErro("");
+    setCarregando(true);
+    try {
+      await onLogin(email.trim(), senha);
+    } catch (e) {
+      setErro(traduzErroFirebase(e));
+      setCarregando(false);
+    }
+  }
+
+  async function entrarGoogle() {
+    setErro("");
+    setCarregando(true);
+    try {
+      await onLoginGoogle();
+    } catch (e) {
+      setErro(traduzErroFirebase(e));
+      setCarregando(false);
+    }
+  }
+
+  return (
+    <div data-theme={tema} className="min-h-screen bg-[var(--bg)] flex items-center justify-center px-4 relative" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <FontStyle />
+      <button
+        onClick={onAlternarTema}
+        className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center text-[var(--text-secondary)]"
+        title="Alternar tema claro/escuro"
+      >
+        {tema === "escuro" ? <Sun size={16} /> : <Moon size={16} />}
+      </button>
+      <div className="w-full max-w-sm">
+        <div className="text-center mb-8">
+          <div className="w-12 h-12 rounded-2xl bg-[var(--accent-15)] border border-[var(--accent-30)] flex items-center justify-center mx-auto mb-4">
+            <ShieldCheck size={22} className="text-[var(--accent)]" />
+          </div>
+          <h1 className="text-[var(--text-primary)] font-semibold text-xl" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            Gestão e administração condominial
+          </h1>
+          <p className="text-[var(--text-secondary)] text-sm mt-1">Entre para acessar o painel, sincronizado em todos os aparelhos</p>
+        </div>
+
+        <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 shadow-lg shadow-black/20">
+          <Field label="E-mail">
+            <input type="email" className={inputCls} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" />
+          </Field>
+          <Field label="Senha">
+            <input type="password" className={inputCls} value={senha} onChange={(e) => setSenha(e.target.value)} placeholder="••••••••" />
+          </Field>
+          {erro && <p className="text-xs text-[var(--danger)] mb-3">{erro}</p>}
+          <button disabled={carregando} onClick={entrar} className="w-full bg-[var(--accent)] disabled:opacity-50 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mb-4">
+            {carregando ? "Entrando..." : "Entrar"}
+          </button>
+
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-px bg-[var(--border)] flex-1" />
+            <span className="text-[11px] text-[var(--text-muted)]">ou</span>
+            <div className="h-px bg-[var(--border)] flex-1" />
+          </div>
+
+          <button
+            disabled={carregando}
+            onClick={entrarGoogle}
+            className="w-full bg-white disabled:opacity-50 text-[#1F2937] font-medium py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors"
+          >
+            <GoogleG size={16} />
+            Continuar com Gmail
+          </button>
+        </div>
+
+        <button onClick={onCriarConta} className="w-full text-center text-sm text-[var(--text-secondary)] mt-5">
+          Ainda não tem conta? <span className="text-[var(--accent)] font-medium">Criar conta</span>
+        </button>
+
+        <p className="text-center text-[11px] text-[var(--text-faint)] mt-4">
+          Seus dados ficam salvos na nuvem e disponíveis em qualquer celular ou computador.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function CriarContaScreen({ onCriar, onVoltar, tema }) {
+  const [nomeCompleto, setNomeCompleto] = useState("");
+  const [nomeCondominio, setNomeCondominio] = useState("");
+  const [cnpj, setCnpj] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [erro, setErro] = useState("");
+  const [carregando, setCarregando] = useState(false);
+
+  async function criar() {
+    if (!nomeCompleto.trim() || !nomeCondominio.trim() || !email.trim() || senha.length < 6) {
+      setErro("Preencha nome, condomínio e e-mail, e uma senha com pelo menos 6 caracteres.");
+      return;
+    }
+    setErro("");
+    setCarregando(true);
+    try {
+      await onCriar({
+        nomeCompleto: nomeCompleto.trim(),
+        nomeCondominio: nomeCondominio.trim(),
+        cnpj: cnpj.trim(),
+        email: email.trim(),
+        senha,
+      });
+    } catch (e) {
+      setErro(traduzErroFirebase(e));
+      setCarregando(false);
+    }
+  }
+
+  return (
+    <div data-theme={tema} className="min-h-screen bg-[var(--bg)] flex items-center justify-center px-4 py-10" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <FontStyle />
+      <div className="w-full max-w-sm">
+        <div className="text-center mb-6">
+          <h1 className="text-[var(--text-primary)] font-semibold text-xl" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            Criar conta
+          </h1>
+          <p className="text-[var(--text-secondary)] text-sm mt-1">Leva menos de um minuto</p>
+        </div>
+        <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 shadow-lg shadow-black/20">
+          <Field label="Nome completo">
+            <input className={inputCls} value={nomeCompleto} onChange={(e) => setNomeCompleto(e.target.value)} placeholder="Seu nome" />
+          </Field>
+          <Field label="Nome do condomínio">
+            <input className={inputCls} value={nomeCondominio} onChange={(e) => setNomeCondominio(e.target.value)} placeholder="Ex.: Residencial Jardim Paulista" />
+          </Field>
+          <Field label="CNPJ do condomínio">
+            <input className={inputCls} value={cnpj} onChange={(e) => setCnpj(e.target.value)} placeholder="00.000.000/0000-00" />
+          </Field>
+          <Field label="E-mail de cadastro">
+            <input type="email" className={inputCls} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" />
+          </Field>
+          <Field label="Senha para logar (mínimo 6 caracteres)">
+            <input type="password" className={inputCls} value={senha} onChange={(e) => setSenha(e.target.value)} placeholder="••••••••" />
+          </Field>
+          {erro && <p className="text-xs text-[var(--danger)] mb-3">{erro}</p>}
+          <button disabled={carregando} onClick={criar} className="w-full bg-[var(--accent)] disabled:opacity-50 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm">
+            {carregando ? "Criando..." : "Criar conta"}
+          </button>
+        </div>
+        <button onClick={onVoltar} className="w-full text-center text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] mt-4">
+          Já tenho conta — voltar para o login
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function NovoCondominioScreen({ onCriar, onVoltar, tema }) {
+  const [nome, setNome] = useState("");
+  return (
+    <div data-theme={tema} className="min-h-screen bg-[var(--bg)] flex items-center justify-center px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <FontStyle />
+      <div className="w-full max-w-sm">
+        <div className="text-center mb-6">
+          <h1 className="text-[var(--text-primary)] font-semibold text-xl" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            Cadastrar condomínio
+          </h1>
+          <p className="text-[var(--text-secondary)] text-sm mt-1">Dê um nome ao condomínio que você administra. Dá para adicionar outros depois.</p>
+        </div>
+        <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 shadow-lg shadow-black/20">
+          <Field label="Nome do condomínio">
+            <input className={inputCls} value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Ex.: Residencial Jardim Paulista" />
+          </Field>
+          <button
+            disabled={!nome.trim()}
+            onClick={() => onCriar(nome.trim())}
+            className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm"
+          >
+            Continuar
+          </button>
+          {onVoltar && (
+            <button onClick={onVoltar} className="w-full text-[var(--text-secondary)] text-xs mt-3 hover:text-[var(--text-primary)]">
+              Voltar para meus condomínios
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SelecionarCondominioScreen({ condominios, email, onSelecionar, onNovo, onLogout, tema }) {
+  return (
+    <div data-theme={tema} className="min-h-screen bg-[var(--bg)] flex items-center justify-center px-4 py-10" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <FontStyle />
+      <div className="w-full max-w-sm">
+        <div className="text-center mb-6">
+          <h1 className="text-[var(--text-primary)] font-semibold text-xl" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            Qual condomínio você quer acessar?
+          </h1>
+          <p className="text-[var(--text-secondary)] text-sm mt-1">{email}</p>
+        </div>
+        <div className="space-y-2 mb-4">
+          {condominios.map((c) => (
+            <button
+              key={c.id}
+              onClick={() => onSelecionar(c)}
+              className="w-full flex items-center justify-between bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl px-4 py-3.5 shadow-lg shadow-black/20 hover:border-[var(--accent-50)] transition-colors"
+            >
+              <span className="text-[var(--text-primary)] text-sm font-medium">{c.nome}</span>
+              <ChevronRight size={16} className="text-[var(--text-muted)]" />
+            </button>
+          ))}
+        </div>
+        <button
+          onClick={onNovo}
+          className="w-full flex items-center justify-center gap-1.5 border border-dashed border-[var(--border)] rounded-2xl py-3 text-sm text-[var(--accent)] mb-3"
+        >
+          <Plus size={15} /> Adicionar condomínio
+        </button>
+        <button onClick={onLogout} className="w-full text-center text-xs text-[var(--text-muted)] hover:text-[var(--danger)]">
+          Sair
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   App principal
+--------------------------------------------------------- */
+
+function App() {
+  const [screen, setScreen] = useState("loading"); // loading | login | novoCondominio | selecionar | app
+  const [dataLoading, setDataLoading] = useState(false);
+  const [tab, setTab] = useState("dashboard");
+  const [demandas, setDemandas] = useState([]);
+  const [normas, setNormas] = useState([]);
+  const [obrigacoesPeriodicas, setObrigacoesPeriodicas] = useState([]);
+  const [obrigacoesTrabalhistas, setObrigacoesTrabalhistas] = useState([]);
+  const [manutencoes, setManutencoes] = useState([]);
+  const [comunicados, setComunicados] = useState([]);
+  const [consumos, setConsumos] = useState([]);
+  const [consumoView, setConsumoView] = useState("agua");
+  const [zeladoriaView, setZeladoriaView] = useState("demanda");
+  const [obrigacaoView, setObrigacaoView] = useState("periodicas");
+  const [limpezaView, setLimpezaView] = useState("escalas");
+  const [limpezaEscalas, setLimpezaEscalas] = useState([]);
+  const [limpezaEstoque, setLimpezaEstoque] = useState([]);
+  const [limpezaFinanceiro, setLimpezaFinanceiro] = useState([]);
+  const [notificacoes, setNotificacoes] = useState([]);
+
+  const [authEmail, setAuthEmail] = useState("");
+  const [authNome, setAuthNome] = useState("");
+  const [condominios, setCondominios] = useState([]);
+  const [condominioAtual, setCondominioAtual] = useState(null);
+  const [contaMenuOpen, setContaMenuOpen] = useState(false);
+  const [genioAberto, setGenioAberto] = useState(false);
+  const [genioMensagens, setGenioMensagens] = useState([
+    { autor: "genio", texto: "Oi! Sou o Gênio do Regimento. Me pergunte sobre qualquer assunto — ex.: \"crachá\", \"velocidade\", \"mudança\" — que eu busco o artigo exato cadastrado." },
+  ]);
+  const [genioInput, setGenioInput] = useState("");
+  const [tema, setTema] = useState("escuro"); // "escuro" | "claro" — preferência pessoal, não fica presa a um condomínio
+
+  const [modal, setModal] = useState(null); // 'demanda' | 'norma' | 'obrigacaoPeriodicaNova' | 'obrigacaoTrabalhistaNova' | 'manutencao' | 'comunicado' | 'consumo'
+  const [editing, setEditing] = useState(null);
+
+  async function carregarDadosDoCondominio(id) {
+    setDataLoading(true);
+    const [d, n, op, ot, m, c, cons, notifs, le, ee, lf] = await Promise.all([
+      load(`demandas:${id}`, []),
+      load(`normas:${id}`, null),
+      load(`obrigacoesPeriodicas:${id}`, null),
+      load(`obrigacoesTrabalhistas:${id}`, null),
+      load(`manutencoes:${id}`, []),
+      load(`comunicados:${id}`, []),
+      load(`consumos:${id}`, []),
+      load(`notificacoes:${id}`, []),
+      load(`limpezaEscalas:${id}`, null),
+      load(`limpezaEstoque:${id}`, null),
+      load(`limpezaFinanceiro:${id}`, []),
+    ]);
+    setDemandas(d);
+    if (n === null) {
+      const seeded = seedNormas();
+      setNormas(seeded);
+      persist(`normas:${id}`, seeded);
+    } else {
+      setNormas(n);
+    }
+    if (op === null) {
+      const seeded = seedObrigacoesPeriodicas();
+      setObrigacoesPeriodicas(seeded);
+      persist(`obrigacoesPeriodicas:${id}`, seeded);
+    } else {
+      setObrigacoesPeriodicas(op);
+    }
+    if (ot === null) {
+      const seeded = seedObrigacoesTrabalhistas();
+      setObrigacoesTrabalhistas(seeded);
+      persist(`obrigacoesTrabalhistas:${id}`, seeded);
+    } else {
+      setObrigacoesTrabalhistas(ot);
+    }
+    if (le === null) {
+      const seeded = seedLimpezaEscalas();
+      setLimpezaEscalas(seeded);
+      persist(`limpezaEscalas:${id}`, seeded);
+    } else {
+      setLimpezaEscalas(le);
+    }
+    if (ee === null) {
+      const seeded = seedLimpezaEstoque();
+      setLimpezaEstoque(seeded);
+      persist(`limpezaEstoque:${id}`, seeded);
+    } else {
+      setLimpezaEstoque(ee);
+    }
+    setLimpezaFinanceiro(lf);
+    setManutencoes(m);
+    setComunicados(c);
+    setConsumos(cons);
+    setNotificacoes(notifs);
+    setDataLoading(false);
+  }
+
+  async function selecionarCondominio(cond) {
+    setCondominioAtual(cond);
+    setContaMenuOpen(false);
+    await carregarDadosDoCondominio(cond.id);
+    setScreen("app");
+  }
+
+  function decidirProximaTela(listaCondominios) {
+    if (listaCondominios.length === 0) setScreen("novoCondominio");
+    else if (listaCondominios.length === 1) selecionarCondominio(listaCondominios[0]);
+    else setScreen("selecionar");
+  }
+
+  const fluxoManualRef = useRef(false);
+  const [erroLoginInicial, setErroLoginInicial] = useState("");
+
+  useEffect(() => {
+    let unsubscribe = () => {};
+    (async () => {
+      try {
+        const { auth, db } = await carregarFirebase();
+        try {
+          await auth.getRedirectResult();
+        } catch (e) {
+          setErroLoginInicial(traduzErroFirebase(e));
+        }
+        unsubscribe = auth.onAuthStateChanged(async (user) => {
+          if (fluxoManualRef.current) return;
+          if (!user) {
+            setScreen("login");
+            return;
+          }
+          configurarStorage(db, user.uid);
+          setAuthEmail(user.email || "");
+          setAuthNome(user.displayName || "");
+          const [conds, temaSalvo] = await Promise.all([load("condominios", []), load("tema", null)]);
+          if (temaSalvo === "claro" || temaSalvo === "escuro") setTema(temaSalvo);
+          setCondominios(conds);
+          decidirProximaTela(conds);
+        });
+      } catch (e) {
+        setScreen("login");
+      }
+    })();
+    return () => unsubscribe();
+  }, []);
+
+  function alternarTema() {
+    const novo = tema === "escuro" ? "claro" : "escuro";
+    setTema(novo);
+    if (window.storage) persist("tema", novo);
+  }
+
+  function enviarMensagemGenio() {
+    const pergunta = genioInput.trim();
+    if (!pergunta) return;
+    const resposta = responderGenio(pergunta);
+    setGenioMensagens((prev) => [...prev, { autor: "usuario", texto: pergunta }, { autor: "genio", texto: resposta }]);
+    setGenioInput("");
+  }
+
+  async function handleLogin(email, senha) {
+    const { auth } = await carregarFirebase();
+    await auth.signInWithEmailAndPassword(email, senha);
+    // onAuthStateChanged cuida do resto (configura o storage e decide a tela)
+  }
+
+  async function handleLoginGoogle() {
+    const { auth } = await carregarFirebase();
+    const provider = new window.firebase.auth.GoogleAuthProvider();
+    // Redireciona em vez de abrir popup — é o método confiável em navegadores de celular,
+    // onde popups costumam ser bloqueados silenciosamente. A página recarrega ao voltar do
+    // Google, e getRedirectResult() (acima) conclui o login e mostra erro, se houver.
+    await auth.signInWithRedirect(provider);
+  }
+
+  async function criarConta({ nomeCompleto, nomeCondominio, cnpj, email, senha }) {
+    fluxoManualRef.current = true;
+    try {
+      const { auth, db } = await carregarFirebase();
+      const cred = await auth.createUserWithEmailAndPassword(email, senha);
+      await cred.user.updateProfile({ displayName: nomeCompleto });
+      configurarStorage(db, cred.user.uid);
+      setAuthEmail(cred.user.email || email);
+      setAuthNome(nomeCompleto);
+      const novo = { id: uid(), nome: nomeCondominio, cnpj };
+      await persist("condominios", [novo]);
+      setCondominios([novo]);
+      await carregarDadosDoCondominio(novo.id);
+      setCondominioAtual(novo);
+      setScreen("app");
+    } finally {
+      fluxoManualRef.current = false;
+    }
+  }
+
+  async function criarCondominio(nome) {
+    const novo = { id: uid(), nome };
+    const next = [...condominios, novo];
+    setCondominios(next);
+    await persist("condominios", next);
+    selecionarCondominio(novo);
+  }
+
+  async function handleLogout() {
+    try {
+      const { auth } = await carregarFirebase();
+      await auth.signOut();
+    } catch (e) {
+      /* sem sessão para limpar */
+    }
+    window.storage = undefined;
+    setAuthEmail("");
+    setAuthNome("");
+    setCondominioAtual(null);
+    setContaMenuOpen(false);
+    setCondominios([]);
+    setDemandas([]);
+    setNormas([]);
+    setObrigacoesPeriodicas([]);
+    setObrigacoesTrabalhistas([]);
+    setManutencoes([]);
+    setComunicados([]);
+    setConsumos([]);
+    setNotificacoes([]);
+    setLimpezaEscalas([]);
+    setLimpezaEstoque([]);
+    setLimpezaFinanceiro([]);
+    setScreen("login");
+  }
+
+  /* ---------- Demandas ---------- */
+  function saveDemandas(next) {
+    setDemandas(next);
+    persist(`demandas:${condominioAtual.id}`, next);
+  }
+  function addDemanda(data) {
+    const nova = {
+      id: uid(),
+      ...data,
+      fase: "aberta",
+      cancelada: false,
+      dataAbertura: todayISO(),
+      historico: [{ data: todayISO(), texto: "Demanda registrada" }],
+    };
+    saveDemandas([nova, ...demandas]);
+  }
+  function setFase(id, faseKey) {
+    saveDemandas(
+      demandas.map((d) => {
+        if (d.id !== id) return d;
+        if (d.fase === faseKey) {
+          // clicou de novo na fase já ativa: volta para a fase anterior (desfaz o clique)
+          const voltarPara = d.faseAnterior || "aberta";
+          return {
+            ...d,
+            fase: voltarPara,
+            faseAnterior: d.fase,
+            historico: [...(d.historico || []), { data: todayISO(), texto: `Fase revertida para "${FASES.find((f) => f.key === voltarPara)?.label}"` }],
+          };
+        }
+        return {
+          ...d,
+          fase: faseKey,
+          faseAnterior: d.fase,
+          historico: [...(d.historico || []), { data: todayISO(), texto: `Fase alterada para "${FASES.find((f) => f.key === faseKey)?.label}"` }],
+        };
+      })
+    );
+  }
+  function cancelarDemanda(id) {
+    saveDemandas(
+      demandas.map((d) =>
+        d.id === id ? { ...d, cancelada: true, historico: [...(d.historico || []), { data: todayISO(), texto: "Demanda cancelada" }] } : d
+      )
+    );
+  }
+  function addHistorico(id, texto) {
+    saveDemandas(demandas.map((d) => (d.id === id ? { ...d, historico: [...(d.historico || []), { data: todayISO(), texto }] } : d)));
+  }
+  function updateOrcamentoDemanda(id, orcamentoItens) {
+    saveDemandas(demandas.map((d) => (d.id === id ? { ...d, orcamentoItens } : d)));
+  }
+  function deleteDemanda(id) {
+    saveDemandas(demandas.filter((d) => d.id !== id));
+  }
+
+  /* ---------- Normas ---------- */
+  function saveNormas(next) {
+    setNormas(next);
+    persist(`normas:${condominioAtual.id}`, next);
+  }
+  function addNorma(data) {
+    saveNormas([{ id: uid(), ...data }, ...normas]);
+  }
+  function updateNorma(id, data) {
+    saveNormas(normas.map((n) => (n.id === id ? { ...n, ...data } : n)));
+  }
+  function deleteNorma(id) {
+    saveNormas(normas.filter((n) => n.id !== id));
+  }
+  function verificarNorma(norma) {
+    const hoje = todayISO();
+    const prox = new Date();
+    prox.setMonth(prox.getMonth() + (norma.periodicidadeMeses || 12));
+    updateNorma(norma.id, { ultimaVerificacao: hoje, proximaVerificacao: prox.toISOString().slice(0, 10) });
+  }
+
+  /* ---------- Obrigações periódicas ---------- */
+  function saveObrigacoesPeriodicas(next) {
+    setObrigacoesPeriodicas(next);
+    persist(`obrigacoesPeriodicas:${condominioAtual.id}`, next);
+  }
+  function updateObrigacaoPeriodica(id, data) {
+    saveObrigacoesPeriodicas(obrigacoesPeriodicas.map((p) => (p.id === id ? { ...p, ...data } : p)));
+  }
+  function addObrigacaoPeriodica(nome) {
+    saveObrigacoesPeriodicas([...obrigacoesPeriodicas, { id: uid(), nome, fixo: false, dataRealizacao: null, dataVencimento: null, orcamento: "", empresaTelefone: "" }]);
+  }
+  function deleteObrigacaoPeriodica(id) {
+    saveObrigacoesPeriodicas(obrigacoesPeriodicas.filter((p) => p.id !== id));
+  }
+
+  /* ---------- Obrigações trabalhistas ---------- */
+  function saveObrigacoesTrabalhistas(next) {
+    setObrigacoesTrabalhistas(next);
+    persist(`obrigacoesTrabalhistas:${condominioAtual.id}`, next);
+  }
+  function updateObrigacaoTrabalhista(id, data) {
+    saveObrigacoesTrabalhistas(obrigacoesTrabalhistas.map((p) => (p.id === id ? { ...p, ...data } : p)));
+  }
+  function addObrigacaoTrabalhista(nome) {
+    saveObrigacoesTrabalhistas([...obrigacoesTrabalhistas, { id: uid(), nome, fixo: false, dataRealizacao: null, dataVencimento: null, orcamento: "", empresaTelefone: "" }]);
+  }
+  function deleteObrigacaoTrabalhista(id) {
+    saveObrigacoesTrabalhistas(obrigacoesTrabalhistas.filter((p) => p.id !== id));
+  }
+
+  /* ---------- Manutenções ---------- */
+  function saveManutencoes(next) {
+    setManutencoes(next);
+    persist(`manutencoes:${condominioAtual.id}`, next);
+  }
+  function addManutencao(data) {
+    saveManutencoes([{ id: uid(), ...data }, ...manutencoes]);
+  }
+  function deleteManutencao(id) {
+    saveManutencoes(manutencoes.filter((m) => m.id !== id));
+  }
+
+  /* ---------- Comunicados ---------- */
+  function saveComunicados(next) {
+    setComunicados(next);
+    persist(`comunicados:${condominioAtual.id}`, next);
+  }
+  function addComunicado(data) {
+    saveComunicados([{ id: uid(), data: todayISO(), ...data }, ...comunicados]);
+  }
+  function deleteComunicado(id) {
+    saveComunicados(comunicados.filter((c) => c.id !== id));
+  }
+
+  /* ---------- Consumos ---------- */
+  function saveConsumos(next) {
+    setConsumos(next);
+    persist(`consumos:${condominioAtual.id}`, next);
+  }
+  function addConsumo(data) {
+    saveConsumos([{ id: uid(), ...data }, ...consumos]);
+  }
+  function deleteConsumo(id) {
+    saveConsumos(consumos.filter((c) => c.id !== id));
+  }
+
+  /* ---------- Notificações ---------- */
+  function saveNotificacoes(next) {
+    setNotificacoes(next);
+    persist(`notificacoes:${condominioAtual.id}`, next);
+  }
+  function addNotificacao(data) {
+    saveNotificacoes([{ id: uid(), ...data }, ...notificacoes]);
+  }
+  function deleteNotificacao(id) {
+    saveNotificacoes(notificacoes.filter((n) => n.id !== id));
+  }
+
+  /* ---------- Limpeza: escalas ---------- */
+  function saveLimpezaEscalas(next) {
+    setLimpezaEscalas(next);
+    persist(`limpezaEscalas:${condominioAtual.id}`, next);
+  }
+  function updateLimpezaEscala(id, data) {
+    saveLimpezaEscalas(limpezaEscalas.map((e) => (e.id === id ? { ...e, ...data } : e)));
+  }
+  function addLimpezaEscala(nome) {
+    saveLimpezaEscalas([...limpezaEscalas, { id: uid(), nome, fixo: false, dataRealizacao: null, dataVencimento: null, orcamento: "", empresaTelefone: "" }]);
+  }
+  function deleteLimpezaEscala(id) {
+    saveLimpezaEscalas(limpezaEscalas.filter((e) => e.id !== id));
+  }
+
+  /* ---------- Limpeza: estoque ---------- */
+  function saveLimpezaEstoque(next) {
+    setLimpezaEstoque(next);
+    persist(`limpezaEstoque:${condominioAtual.id}`, next);
+  }
+  function addLimpezaEstoqueItem(data) {
+    saveLimpezaEstoque([{ id: uid(), ...data }, ...limpezaEstoque]);
+  }
+  function updateLimpezaEstoqueItem(id, data) {
+    saveLimpezaEstoque(limpezaEstoque.map((it) => (it.id === id ? { ...it, ...data } : it)));
+  }
+  function deleteLimpezaEstoqueItem(id) {
+    saveLimpezaEstoque(limpezaEstoque.filter((it) => it.id !== id));
+  }
+
+  /* ---------- Limpeza: financeiro ---------- */
+  function saveLimpezaFinanceiro(next) {
+    setLimpezaFinanceiro(next);
+    persist(`limpezaFinanceiro:${condominioAtual.id}`, next);
+  }
+  function addLimpezaFinanceiro(data) {
+    saveLimpezaFinanceiro([{ id: uid(), ...data }, ...limpezaFinanceiro]);
+  }
+  function deleteLimpezaFinanceiro(id) {
+    saveLimpezaFinanceiro(limpezaFinanceiro.filter((f) => f.id !== id));
+  }
+
+
+  /* ---------- Derivados ---------- */
+  const demandasAbertas = useMemo(() => demandas.filter((d) => !d.cancelada && d.fase !== "concluida"), [demandas]);
+  const obrigacoesPeriodicasUrgentes = useMemo(
+    () => [...obrigacoesPeriodicas].filter((p) => p.dataVencimento).map((p) => ({ ...p, _status: obrigacaoStatus(p) })).filter((p) => p._status.key !== "ok").sort((a, b) => daysUntil(a.dataVencimento) - daysUntil(b.dataVencimento)),
+    [obrigacoesPeriodicas]
+  );
+  const obrigacoesTrabalhistasUrgentes = useMemo(
+    () => [...obrigacoesTrabalhistas].filter((p) => p.dataVencimento).map((p) => ({ ...p, _status: obrigacaoStatus(p) })).filter((p) => p._status.key !== "ok").sort((a, b) => daysUntil(a.dataVencimento) - daysUntil(b.dataVencimento)),
+    [obrigacoesTrabalhistas]
+  );
+  const manutencoesHoje = useMemo(() => manutencoes.filter((m) => m.data === todayISO()), [manutencoes]);
+  const comunicadosRecentes = useMemo(() => [...comunicados].sort((a, b) => (a.data < b.data ? 1 : -1)).slice(0, 4), [comunicados]);
+
+  if (screen === "loading") return <LoadingScreen text="Carregando..." tema={tema} />;
+  if (screen === "login") return <LoginScreen onLogin={handleLogin} onLoginGoogle={handleLoginGoogle} onCriarConta={() => setScreen("criarConta")} tema={tema} onAlternarTema={alternarTema} erroInicial={erroLoginInicial} />;
+  if (screen === "criarConta") return <CriarContaScreen onCriar={criarConta} onVoltar={() => setScreen("login")} tema={tema} />;
+  if (screen === "novoCondominio")
+    return (
+      <NovoCondominioScreen
+        onCriar={criarCondominio}
+        onVoltar={condominios.length > 0 ? () => setScreen("selecionar") : null}
+        tema={tema}
+      />
+    );
+  if (screen === "selecionar")
+    return (
+      <SelecionarCondominioScreen
+        condominios={condominios}
+        email={authEmail}
+        onSelecionar={selecionarCondominio}
+        onNovo={() => setScreen("novoCondominio")}
+        onLogout={handleLogout}
+        tema={tema}
+      />
+    );
+  if (dataLoading) return <LoadingScreen text="Carregando dados do condomínio..." tema={tema} />;
+
+  return (
+    <div data-theme={tema} className="min-h-screen bg-[var(--bg)]" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <FontStyle />
+
+      {/* Cabeçalho */}
+      <header className="border-b border-[var(--border-soft)] px-4 sm:px-6 py-4 sticky top-0 bg-[var(--bg-header-95)] backdrop-blur z-40">
+        <div className="max-w-5xl mx-auto flex items-center justify-between gap-3">
+          <div className="min-w-0">
+            <div className="text-[var(--text-primary)] font-semibold text-lg leading-tight truncate" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+              Gestão e administração condominial
+            </div>
+            <div className="relative inline-block mt-0.5">
+              <button
+                onClick={() => setContaMenuOpen((s) => !s)}
+                className="flex items-center gap-1 text-[var(--text-muted)] text-xs hover:text-[var(--text-secondary)]"
+              >
+                <span className="truncate max-w-[200px]">{condominioAtual?.nome}</span>
+                <ChevronRight size={12} className={contaMenuOpen ? "-rotate-90 transition-transform" : "rotate-90 transition-transform"} />
+              </button>
+              {contaMenuOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setContaMenuOpen(false)} />
+                  <div className="absolute left-0 top-6 z-50 w-56 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl shadow-2xl shadow-black/40 py-2">
+                    <div className="px-3 py-1.5 text-[11px] text-[var(--text-faint)] truncate">{authNome || authEmail}</div>
+                    {condominios.length > 1 && (
+                      <button
+                        onClick={() => { setContaMenuOpen(false); setScreen("selecionar"); }}
+                        className="w-full text-left px-3 py-2 text-sm text-[var(--text-body)] hover:bg-[var(--bg-card-alt)]"
+                      >
+                        Trocar de condomínio
+                      </button>
+                    )}
+                    <button
+                      onClick={() => { setContaMenuOpen(false); setScreen("novoCondominio"); }}
+                      className="w-full text-left px-3 py-2 text-sm text-[var(--text-body)] hover:bg-[var(--bg-card-alt)] flex items-center gap-1.5"
+                    >
+                      <Plus size={13} /> Adicionar condomínio
+                    </button>
+                    <div className="h-px bg-[var(--border)] my-1" />
+                    <button
+                      onClick={handleLogout}
+                      className="w-full text-left px-3 py-2 text-sm text-[var(--danger)] hover:bg-[var(--bg-card-alt)]"
+                    >
+                      Sair
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+          <div className="flex items-center gap-1 shrink-0">
+            <button
+              onClick={alternarTema}
+              className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] p-2"
+              title="Alternar tema claro/escuro"
+            >
+              {tema === "escuro" ? <Sun size={17} /> : <Moon size={17} />}
+            </button>
+            {(obrigacoesPeriodicasUrgentes.length + obrigacoesTrabalhistasUrgentes.length) > 0 && (
+              <button onClick={() => { setObrigacaoView("periodicas"); setTab("obrigacoes"); }} className="relative text-[var(--text-secondary)] hover:text-[var(--text-primary)] p-2">
+                <Bell size={18} />
+                <span className="absolute -top-0.5 -right-0.5 bg-[var(--danger)] text-[9px] font-bold text-[var(--accent-contrast)] w-4 h-4 rounded-full flex items-center justify-center">
+                  {obrigacoesPeriodicasUrgentes.length + obrigacoesTrabalhistasUrgentes.length}
+                </span>
+              </button>
+            )}
+          </div>
+        </div>
+        <nav className="max-w-5xl mx-auto flex gap-1 mt-4 overflow-x-auto">
+          {NAV_ITEMS.map((item) => {
+            const Icon = item.icon;
+            const active = tab === item.key;
+            return (
+              <button
+                key={item.key}
+                onClick={() => setTab(item.key)}
+                className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors"
+                style={{
+                  color: active ? "var(--accent-contrast)" : AZUL_ESCURO,
+                  backgroundColor: active ? "var(--accent)" : "transparent",
+                }}
+              >
+                <Icon size={15} />
+                {item.label}
+              </button>
+            );
+          })}
+        </nav>
+      </header>
+
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6">
+        {/* DASHBOARD */}
+        {tab === "dashboard" && (
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <StatCard label="Demandas abertas" value={demandasAbertas.length} icon={ClipboardList} accent="var(--accent)" />
+              <StatCard label="Obrigações vencendo" value={obrigacoesPeriodicasUrgentes.length + obrigacoesTrabalhistasUrgentes.length} icon={CalendarClock} accent="var(--danger)" />
+              <StatCard label="Manutenções hoje" value={manutencoesHoje.length} icon={Wrench} accent="var(--info)" />
+              <StatCard label="Comunicados (feed)" value={comunicados.length} icon={Megaphone} accent="var(--purple)" />
+            </div>
+
+            <NormaDoDiaCard normas={normas} onVerTodas={() => setTab("normas")} />
+
+            <section>
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="text-[var(--text-primary)] font-semibold text-sm" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Obrigações periódicas vencendo</h2>
+                <button onClick={() => { setObrigacaoView("periodicas"); setTab("obrigacoes"); }} className="text-xs text-[var(--accent)] flex items-center gap-1">Ver todas <ArrowRight size={12} /></button>
+              </div>
+              {obrigacoesPeriodicasUrgentes.length === 0 ? (
+                <EmptyState text="Nenhuma obrigação periódica vencida ou próxima do vencimento." />
+              ) : (
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {obrigacoesPeriodicasUrgentes.slice(0, 4).map((p) => (
+                    <ObrigacaoCard key={p.id} item={p} onSave={updateObrigacaoPeriodica} onDelete={deleteObrigacaoPeriodica} />
+                  ))}
+                </div>
+              )}
+            </section>
+
+            {obrigacoesTrabalhistasUrgentes.length > 0 && (
+              <section>
+                <div className="flex items-center justify-between mb-3">
+                  <h2 className="text-[var(--text-primary)] font-semibold text-sm" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Obrigações trabalhistas vencendo</h2>
+                  <button onClick={() => { setObrigacaoView("trabalhistas"); setTab("obrigacoes"); }} className="text-xs text-[var(--accent)] flex items-center gap-1">Ver todas <ArrowRight size={12} /></button>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {obrigacoesTrabalhistasUrgentes.slice(0, 4).map((p) => (
+                    <ObrigacaoCard key={p.id} item={p} onSave={updateObrigacaoTrabalhista} onDelete={deleteObrigacaoTrabalhista} />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            <section>
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="text-[var(--text-primary)] font-semibold text-sm" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Demandas em aberto</h2>
+                <button onClick={() => { setZeladoriaView("demanda"); setTab("zeladoria"); }} className="text-xs text-[var(--accent)] flex items-center gap-1">Ver todas <ArrowRight size={12} /></button>
+              </div>
+              {demandasAbertas.length === 0 ? (
+                <EmptyState text="Nenhuma demanda em aberto no momento." actionLabel="Registrar demanda" onAction={() => { setEditing(null); setModal("demanda"); }} />
+              ) : (
+                <div className="space-y-3">
+                  {demandasAbertas.slice(0, 3).map((d) => (
+                    <DemandaCard key={d.id} demanda={d} onSetFase={setFase} onCancelar={cancelarDemanda} onAddHistorico={addHistorico} onDelete={deleteDemanda} onSaveOrcamento={updateOrcamentoDemanda} />
+                  ))}
+                </div>
+              )}
+            </section>
+
+            <section>
+              <h2 className="text-[var(--text-primary)] font-semibold text-sm mb-3" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Comunicados recentes</h2>
+              {comunicadosRecentes.length === 0 ? (
+                <EmptyState text="Nenhum comunicado publicado ainda." />
+              ) : (
+                <div className="space-y-2">
+                  {comunicadosRecentes.map((c) => {
+                    const tipo = TIPOS_COMUNICADO.find((t) => t.key === c.tipo) || TIPOS_COMUNICADO[0];
+                    return (
+                      <div key={c.id} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 flex items-start justify-between gap-3 shadow-md shadow-black/10">
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <Pill color={tipo.color}>{c.tipo}</Pill>
+                            <span className="text-[11px] text-[var(--text-muted)]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>{formatDate(c.data)}</span>
+                            {c.anexo && <Paperclip size={12} className="text-[var(--text-muted)]" />}
+                          </div>
+                          <p className="text-sm text-[var(--text-primary)] font-medium">{c.titulo}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </section>
+          </div>
+        )}
+
+        {/* ZELADORIA */}
+        {tab === "zeladoria" && (
+          <div>
+            <h2 className="font-semibold mb-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: AZUL_ESCURO }}>Zeladoria</h2>
+            <div className="flex gap-1.5 mb-4 overflow-x-auto pb-1">
+              {[
+                { key: "demanda", label: "Demanda" },
+                { key: "limpeza", label: "Limpeza" },
+                { key: "manutencoes", label: "Manutenções" },
+              ].map((v) => (
+                <button
+                  key={v.key}
+                  onClick={() => setZeladoriaView(v.key)}
+                  className="px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors shrink-0"
+                  style={{
+                    color: zeladoriaView === v.key ? "var(--accent-contrast)" : "var(--text-secondary)",
+                    backgroundColor: zeladoriaView === v.key ? "var(--accent)" : "var(--bg-card)",
+                    border: "1px solid var(--border)",
+                  }}
+                >
+                  {v.label}
+                </button>
+              ))}
+            </div>
+
+            {zeladoriaView === "demanda" && (
+              <div>
+                <div className="flex items-center justify-end mb-4">
+                  <button onClick={() => { setEditing(null); setModal("demanda"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                    <Plus size={16} /> Nova demanda
+                  </button>
+                </div>
+                {demandas.length === 0 ? (
+                  <EmptyState text="Nenhuma demanda registrada." actionLabel="Registrar a primeira" onAction={() => { setEditing(null); setModal("demanda"); }} />
+                ) : (
+                  <div className="space-y-3">
+                    {demandas.map((d) => (
+                      <DemandaCard key={d.id} demanda={d} onSetFase={setFase} onCancelar={cancelarDemanda} onAddHistorico={addHistorico} onDelete={deleteDemanda} onSaveOrcamento={updateOrcamentoDemanda} />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {zeladoriaView === "limpeza" && (
+              <div>
+                <div className="flex gap-1.5 mb-4">
+                  {[
+                    { key: "escalas", label: "Escalas" },
+                    { key: "estoque", label: "Estoque" },
+                    { key: "financeiro", label: "Financeiro" },
+                  ].map((v) => (
+                    <button
+                      key={v.key}
+                      onClick={() => setLimpezaView(v.key)}
+                      className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
+                      style={{
+                        color: limpezaView === v.key ? "var(--accent-contrast)" : "var(--text-secondary)",
+                        backgroundColor: limpezaView === v.key ? "var(--accent)" : "var(--bg-card-alt)",
+                        border: "1px solid var(--border)",
+                      }}
+                    >
+                      {v.label}
+                    </button>
+                  ))}
+                </div>
+
+                {limpezaView === "escalas" && (
+                  <div>
+                    <div className="flex items-center justify-end mb-3">
+                      <button onClick={() => { setEditing(null); setModal("limpezaEscalaNova"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                        <Plus size={16} /> Nova área
+                      </button>
+                    </div>
+                    <p className="text-xs text-[var(--text-muted)] mb-4">Toque numa área para registrar a última execução e a próxima prevista.</p>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {limpezaEscalas.map((e) => (
+                        <ObrigacaoCard key={e.id} item={e} onSave={updateLimpezaEscala} onDelete={deleteLimpezaEscala} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {limpezaView === "estoque" && (
+                  <div>
+                    <div className="flex items-center justify-end mb-3">
+                      <button onClick={() => { setEditing(null); setModal("limpezaEstoqueNovo"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                        <Plus size={16} /> Novo item
+                      </button>
+                    </div>
+                    {limpezaEstoque.length === 0 ? (
+                      <EmptyState text="Nenhum item cadastrado." actionLabel="Adicionar o primeiro" onAction={() => { setEditing(null); setModal("limpezaEstoqueNovo"); }} />
+                    ) : (
+                      <div className="grid sm:grid-cols-2 gap-3">
+                        {limpezaEstoque.map((it) => (
+                          <EstoqueItemCard key={it.id} item={it} onEdit={(x) => { setEditing(x); setModal("limpezaEstoqueNovo"); }} onDelete={deleteLimpezaEstoqueItem} />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {limpezaView === "financeiro" && (
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <p className="text-xs text-[var(--text-muted)]">Meta de economia: 10% ao mês</p>
+                      <button onClick={() => { setEditing(null); setModal("limpezaFinanceiroNovo"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                        <Plus size={16} /> Novo registro
+                      </button>
+                    </div>
+                    {limpezaFinanceiro.length === 0 ? (
+                      <EmptyState text="Nenhum gasto registrado ainda." actionLabel="Adicionar o primeiro" onAction={() => { setEditing(null); setModal("limpezaFinanceiroNovo"); }} />
+                    ) : (
+                      <div className="grid sm:grid-cols-2 gap-3">
+                        {[...limpezaFinanceiro].sort((a, b) => (a.mesAno < b.mesAno ? 1 : -1)).map((f) => (
+                          <LimpezaFinanceiroCard key={f.id} entry={f} historico={limpezaFinanceiro} onDelete={deleteLimpezaFinanceiro} />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {zeladoriaView === "manutencoes" && (
+              <div>
+                <div className="flex items-center justify-end mb-4">
+                  <button onClick={() => { setEditing(null); setModal("manutencao"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                    <Plus size={16} /> Novo registro
+                  </button>
+                </div>
+                {manutencoes.length === 0 ? (
+                  <EmptyState text="Nenhuma manutenção registrada ainda." actionLabel="Registrar a primeira" onAction={() => { setEditing(null); setModal("manutencao"); }} />
+                ) : (
+                  <div className="space-y-2">
+                    {[...manutencoes].sort((a, b) => (a.data < b.data ? 1 : -1)).map((m) => {
+                      const status = STATUS_MANUTENCAO.find((s) => s.key === m.status) || STATUS_MANUTENCAO[0];
+                      return (
+                        <div key={m.id} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 shadow-md shadow-black/10">
+                          <div className="flex items-start justify-between gap-3">
+                            <div>
+                              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                                <span className="text-xs text-[var(--text-muted)]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>{formatDate(m.data)}</span>
+                                <Pill color={status.color}>{m.status}</Pill>
+                                <span className="text-[11px] text-[var(--text-muted)] uppercase tracking-wider">{m.tipo}</span>
+                              </div>
+                              <p className="text-sm text-[var(--text-primary)] font-medium">{m.item}</p>
+                              {m.descricaoExecucao && <p className="text-xs text-[var(--text-secondary)] mt-1">{m.descricaoExecucao}</p>}
+                              {m.responsavel && <p className="text-xs text-[var(--text-muted)] mt-1 flex items-center gap-1"><User size={11} /> {m.responsavel}</p>}
+                            </div>
+                            <button onClick={() => deleteManutencao(m.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1 shrink-0"><Trash2 size={14} /></button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* NORMAS */}
+        {tab === "normas" && (
+          <div>
+            <div className="flex items-center justify-between mb-1">
+              <h2 className="font-semibold" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: AZUL_ESCURO }}>Normas ABNT</h2>
+              <button onClick={() => { setEditing(null); setModal("norma"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                <Plus size={16} /> Nova norma
+              </button>
+            </div>
+            <p className="text-xs text-[var(--text-muted)] mb-4">Biblioteca inicial com normas comuns a condomínios — ajuste datas e periodicidades conforme os laudos e contratos do seu prédio.</p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {normas.map((n) => (
+                <PlacaNorma key={n.id} norma={n} onVerificar={verificarNorma} onEdit={(x) => { setEditing(x); setModal("norma"); }} onDelete={deleteNorma} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* OBRIGAÇÕES */}
+        {tab === "obrigacoes" && (
+          <div>
+            <h2 className="font-semibold mb-1" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: AZUL_ESCURO }}>Obrigações</h2>
+            <div className="flex gap-1.5 mb-4 mt-3">
+              {[
+                { key: "periodicas", label: "Periódicas" },
+                { key: "trabalhistas", label: "Trabalhistas" },
+              ].map((v) => (
+                <button
+                  key={v.key}
+                  onClick={() => setObrigacaoView(v.key)}
+                  className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
+                  style={{
+                    color: obrigacaoView === v.key ? "var(--accent-contrast)" : "var(--text-secondary)",
+                    backgroundColor: obrigacaoView === v.key ? "var(--accent)" : "var(--bg-card-alt)",
+                    border: "1px solid var(--border)",
+                  }}
+                >
+                  {v.label}
+                </button>
+              ))}
+            </div>
+
+            {obrigacaoView === "periodicas" && (
+              <div>
+                <div className="flex items-center justify-end mb-1">
+                  <button onClick={() => { setEditing(null); setModal("obrigacaoPeriodicaNova"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                    <Plus size={16} /> Nova obrigação
+                  </button>
+                </div>
+                <p className="text-xs text-[var(--text-muted)] mb-4">Toque em um item para registrar as datas, o orçamento e a empresa responsável.</p>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {obrigacoesPeriodicas.map((p) => (
+                    <ObrigacaoCard key={p.id} item={p} onSave={updateObrigacaoPeriodica} onDelete={deleteObrigacaoPeriodica} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {obrigacaoView === "trabalhistas" && (
+              <div>
+                <div className="flex items-center justify-end mb-1">
+                  <button onClick={() => { setEditing(null); setModal("obrigacaoTrabalhistaNova"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                    <Plus size={16} /> Nova obrigação
+                  </button>
+                </div>
+                <p className="text-xs text-[var(--text-muted)] mb-4">Toque em um item para registrar as datas, o orçamento e a empresa responsável.</p>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {obrigacoesTrabalhistas.map((p) => (
+                    <ObrigacaoCard key={p.id} item={p} onSave={updateObrigacaoTrabalhista} onDelete={deleteObrigacaoTrabalhista} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* COMUNICADOS */}
+        {tab === "comunicados" && (
+          <div>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="font-semibold" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: AZUL_ESCURO }}>Comunicados & Portaria</h2>
+              <button onClick={() => { setEditing(null); setModal("comunicado"); }} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+                <Plus size={16} /> Novo comunicado
+              </button>
+            </div>
+            {comunicados.length === 0 ? (
+              <EmptyState text="Nenhum comunicado publicado ainda." actionLabel="Publicar o primeiro" onAction={() => { setEditing(null); setModal("comunicado"); }} />
+            ) : (
+              <div className="space-y-3">
+                {[...comunicados].sort((a, b) => (a.data < b.data ? 1 : -1)).map((c) => {
+                  const tipo = TIPOS_COMUNICADO.find((t) => t.key === c.tipo) || TIPOS_COMUNICADO[0];
+                  return (
+                    <div key={c.id} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl px-4 py-3 shadow-lg shadow-black/20">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1 flex-wrap">
+                            <Pill color={tipo.color}>{c.tipo}</Pill>
+                            <span className="text-[11px] text-[var(--text-muted)]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>{formatDate(c.data)}</span>
+                            <span className="text-[11px] text-[var(--text-muted)]">→ {c.destino}</span>
+                          </div>
+                          <p className="text-sm text-[var(--text-primary)] font-medium mb-1">{c.titulo}</p>
+                          <p className="text-xs text-[var(--text-secondary)]">{c.conteudo}</p>
+                          {c.anexo && (
+                            <a
+                              href={c.anexo.dataUrl}
+                              download={c.anexo.nome}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-1.5 mt-2 text-xs text-[var(--accent)] hover:text-[var(--accent-hover)] bg-[var(--bg)] border border-[var(--border)] rounded-lg px-2.5 py-1.5"
+                            >
+                              <Paperclip size={12} /> {c.anexo.nome}
+                            </a>
+                          )}
+                        </div>
+                        <button onClick={() => deleteComunicado(c.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1 shrink-0"><Trash2 size={14} /></button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* CONSUMOS */}
+        {tab === "consumos" && (
+          <div>
+            <h2 className="font-semibold mb-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: AZUL_ESCURO }}>Consumos</h2>
+            <div className="flex gap-1.5 mb-4 overflow-x-auto pb-1">
+              {[
+                { key: "agua", label: "💧 Água" },
+                { key: "energia", label: "⚡ Energia elétrica" },
+                { key: "gas", label: "🔥 Gás" },
+                { key: "telefone", label: "📞 Telefone/Internet" },
+                { key: "limpeza", label: "🧹 Limpeza" },
+                { key: "manutencao", label: "🔧 Manutenção" },
+                { key: "historico", label: "📊 Histórico" },
+                { key: "comparativos", label: "📈 Comparativos" },
+              ].map((v) => (
+                <button
+                  key={v.key}
+                  onClick={() => setConsumoView(v.key)}
+                  className="px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors shrink-0"
+                  style={{
+                    color: consumoView === v.key ? "var(--accent-contrast)" : "var(--text-secondary)",
+                    backgroundColor: consumoView === v.key ? "var(--accent)" : "var(--bg-card)",
+                    border: "1px solid var(--border)",
+                  }}
+                >
+                  {v.label}
+                </button>
+              ))}
+            </div>
+
+            {["agua", "energia", "gas", "telefone", "limpeza", "manutencao"].includes(consumoView) && (
+              <ConsumoTipoView
+                tipo={consumoView}
+                consumos={consumos}
+                onNovo={() => { setEditing(null); setModal("consumo"); }}
+                onDelete={deleteConsumo}
+              />
+            )}
+            {consumoView === "historico" && <ConsumoHistorico consumos={consumos} onDelete={deleteConsumo} />}
+            {consumoView === "comparativos" && <ConsumoComparativos consumos={consumos} />}
+          </div>
+        )}
+
+        {/* NOTIFICAÇÕES */}
+        {tab === "notificacoes" && (
+          <NotificacoesTab
+            condominioNome={condominioAtual?.nome}
+            sindicoNome={authNome}
+            notificacoes={notificacoes}
+            onAdd={addNotificacao}
+            onDelete={deleteNotificacao}
+          />
+        )}
+      </main>
+
+      {/* Modais */}
+      {modal === "demanda" && (
+        <DemandaFormModal onClose={() => setModal(null)} onSave={(data) => { addDemanda(data); setModal(null); }} />
+      )}
+      {modal === "norma" && (
+        <NormaFormModal
+          initial={editing}
+          onClose={() => setModal(null)}
+          onSave={(data) => {
+            if (editing) updateNorma(editing.id, data);
+            else addNorma(data);
+            setModal(null);
+          }}
+        />
+      )}
+      {modal === "obrigacaoPeriodicaNova" && (
+        <ObrigacaoNovoModal onClose={() => setModal(null)} onSave={(nome) => { addObrigacaoPeriodica(nome); setModal(null); }} />
+      )}
+      {modal === "obrigacaoTrabalhistaNova" && (
+        <ObrigacaoNovoModal onClose={() => setModal(null)} onSave={(nome) => { addObrigacaoTrabalhista(nome); setModal(null); }} />
+      )}
+      {modal === "manutencao" && (
+        <ManutencaoFormModal onClose={() => setModal(null)} onSave={(data) => { addManutencao(data); setModal(null); }} />
+      )}
+      {modal === "comunicado" && (
+        <ComunicadoFormModal onClose={() => setModal(null)} onSave={(data) => { addComunicado(data); setModal(null); }} />
+      )}
+      {modal === "consumo" && (
+        <ConsumoFormModal tipoInicial={consumoView} onClose={() => setModal(null)} onSave={(data) => { addConsumo(data); setModal(null); }} />
+      )}
+      {modal === "limpezaEscalaNova" && (
+        <ObrigacaoNovoModal onClose={() => setModal(null)} onSave={(nome) => { addLimpezaEscala(nome); setModal(null); }} />
+      )}
+      {modal === "limpezaEstoqueNovo" && (
+        <EstoqueFormModal
+          initial={editing}
+          onClose={() => setModal(null)}
+          onSave={(data) => {
+            if (editing) updateLimpezaEstoqueItem(editing.id, data);
+            else addLimpezaEstoqueItem(data);
+            setModal(null);
+          }}
+        />
+      )}
+      {modal === "limpezaFinanceiroNovo" && (
+        <LimpezaFinanceiroFormModal onClose={() => setModal(null)} onSave={(data) => { addLimpezaFinanceiro(data); setModal(null); }} />
+      )}
+
+      <GenioWidget
+        aberto={genioAberto}
+        onToggle={() => setGenioAberto((s) => !s)}
+        mensagens={genioMensagens}
+        input={genioInput}
+        onInputChange={setGenioInput}
+        onEnviar={enviarMensagemGenio}
+        onFechar={() => setGenioAberto(false)}
+      />
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   Formulários (modais)
+--------------------------------------------------------- */
+
+function DemandaFormModal({ onClose, onSave }) {
+  const [titulo, setTitulo] = useState("");
+  const [categoria, setCategoria] = useState(CATEGORIAS_DEMANDA[0]);
+  const [local, setLocal] = useState("");
+  const [prioridade, setPrioridade] = useState("Média");
+  const [responsavel, setResponsavel] = useState("");
+  const [prazo, setPrazo] = useState("");
+  const [descricao, setDescricao] = useState("");
+
+  return (
+    <Modal title="Nova demanda" onClose={onClose}>
+      <Field label="Título">
+        <input className={inputCls} value={titulo} onChange={(e) => setTitulo(e.target.value)} placeholder="Ex.: Vazamento na garagem — Bloco B" />
+      </Field>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Categoria">
+          <select className={inputCls} value={categoria} onChange={(e) => setCategoria(e.target.value)}>
+            {CATEGORIAS_DEMANDA.map((c) => <option key={c} value={c}>{c}</option>)}
+          </select>
+        </Field>
+        <Field label="Prioridade">
+          <select className={inputCls} value={prioridade} onChange={(e) => setPrioridade(e.target.value)}>
+            {PRIORIDADES.map((p) => <option key={p.key} value={p.key}>{p.key}</option>)}
+          </select>
+        </Field>
+      </div>
+      <Field label="Local (bloco / área comum)">
+        <input className={inputCls} value={local} onChange={(e) => setLocal(e.target.value)} placeholder="Ex.: Bloco C, subsolo" />
+      </Field>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Responsável">
+          <input className={inputCls} value={responsavel} onChange={(e) => setResponsavel(e.target.value)} placeholder="Prestador ou equipe" />
+        </Field>
+        <Field label="Prazo">
+          <input type="date" className={inputCls} value={prazo} onChange={(e) => setPrazo(e.target.value)} />
+        </Field>
+      </div>
+      <Field label="Descrição">
+        <textarea className={inputCls} rows={3} value={descricao} onChange={(e) => setDescricao(e.target.value)} placeholder="Detalhes da demanda..." />
+      </Field>
+      <button
+        disabled={!titulo.trim()}
+        onClick={() => onSave({ titulo, categoria, local, prioridade, responsavel, prazo, descricao })}
+        className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mt-1"
+      >
+        Registrar demanda
+      </button>
+    </Modal>
+  );
+}
+
+function NormaFormModal({ initial, onClose, onSave }) {
+  const [codigo, setCodigo] = useState(initial?.codigo || "");
+  const [titulo, setTitulo] = useState(initial?.titulo || "");
+  const [categoria, setCategoria] = useState(initial?.categoria || CATEGORIAS_NORMA[0]);
+  const [periodicidadeMeses, setPeriodicidadeMeses] = useState(initial?.periodicidadeMeses || 12);
+  const [proximaVerificacao, setProximaVerificacao] = useState(initial?.proximaVerificacao || todayISO());
+  const [observacoes, setObservacoes] = useState(initial?.observacoes || "");
+
+  return (
+    <Modal title={initial ? "Editar norma" : "Nova norma ABNT"} onClose={onClose}>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Código">
+          <input className={inputCls} value={codigo} onChange={(e) => setCodigo(e.target.value)} placeholder="NBR XXXXX" />
+        </Field>
+        <Field label="Categoria">
+          <select className={inputCls} value={categoria} onChange={(e) => setCategoria(e.target.value)}>
+            {CATEGORIAS_NORMA.map((c) => <option key={c} value={c}>{c}</option>)}
+          </select>
+        </Field>
+      </div>
+      <Field label="Título / assunto">
+        <input className={inputCls} value={titulo} onChange={(e) => setTitulo(e.target.value)} placeholder="Ex.: Manutenção de para-raios" />
+      </Field>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Periodicidade (meses)">
+          <input type="number" min={1} className={inputCls} value={periodicidadeMeses} onChange={(e) => setPeriodicidadeMeses(Number(e.target.value))} />
+        </Field>
+        <Field label="Próxima verificação">
+          <input type="date" className={inputCls} value={proximaVerificacao} onChange={(e) => setProximaVerificacao(e.target.value)} />
+        </Field>
+      </div>
+      <Field label="Observações">
+        <textarea className={inputCls} rows={3} value={observacoes} onChange={(e) => setObservacoes(e.target.value)} placeholder="Detalhes, contrato responsável, etc." />
+      </Field>
+      <button
+        disabled={!codigo.trim() || !titulo.trim()}
+        onClick={() =>
+          onSave({
+            codigo,
+            titulo,
+            categoria,
+            periodicidadeMeses,
+            proximaVerificacao,
+            ultimaVerificacao: initial?.ultimaVerificacao || todayISO(),
+            observacoes,
+          })
+        }
+        className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mt-1"
+      >
+        {initial ? "Salvar alterações" : "Adicionar norma"}
+      </button>
+    </Modal>
+  );
+}
+
+function ObrigacaoNovoModal({ onClose, onSave }) {
+  const [nome, setNome] = useState("");
+  return (
+    <Modal title="Nova obrigação" onClose={onClose}>
+      <Field label="Nome da obrigação / serviço">
+        <input className={inputCls} value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Ex.: Manutenção do gerador" />
+      </Field>
+      <button
+        disabled={!nome.trim()}
+        onClick={() => onSave(nome.trim())}
+        className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mt-1"
+      >
+        Adicionar
+      </button>
+    </Modal>
+  );
+}
+
+function ManutencaoFormModal({ onClose, onSave }) {
+  const [data, setData] = useState(todayISO());
+  const [item, setItem] = useState("");
+  const [tipo, setTipo] = useState("Preventiva");
+  const [status, setStatus] = useState("Concluído");
+  const [responsavel, setResponsavel] = useState("");
+  const [descricaoExecucao, setDescricaoExecucao] = useState("");
+
+  return (
+    <Modal title="Registrar manutenção" onClose={onClose}>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Data">
+          <input type="date" className={inputCls} value={data} onChange={(e) => setData(e.target.value)} />
+        </Field>
+        <Field label="Tipo">
+          <select className={inputCls} value={tipo} onChange={(e) => setTipo(e.target.value)}>
+            <option>Preventiva</option>
+            <option>Corretiva</option>
+          </select>
+        </Field>
+      </div>
+      <Field label="Item / equipamento / área">
+        <input className={inputCls} value={item} onChange={(e) => setItem(e.target.value)} placeholder="Ex.: Bomba d'água, elevador social..." />
+      </Field>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Status">
+          <select className={inputCls} value={status} onChange={(e) => setStatus(e.target.value)}>
+            {STATUS_MANUTENCAO.map((s) => <option key={s.key} value={s.key}>{s.key}</option>)}
+          </select>
+        </Field>
+        <Field label="Responsável">
+          <input className={inputCls} value={responsavel} onChange={(e) => setResponsavel(e.target.value)} />
+        </Field>
+      </div>
+      <Field label="Execução realizada">
+        <textarea className={inputCls} rows={3} value={descricaoExecucao} onChange={(e) => setDescricaoExecucao(e.target.value)} placeholder="O que foi feito hoje..." />
+      </Field>
+      <button
+        disabled={!item.trim()}
+        onClick={() => onSave({ data, item, tipo, status, responsavel, descricaoExecucao })}
+        className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mt-1"
+      >
+        Salvar registro
+      </button>
+    </Modal>
+  );
+}
+
+const MAX_ANEXO_BYTES = 3 * 1024 * 1024;
+const TIPOS_ANEXO_ACEITOS = ["application/pdf", "image/jpeg", "image/jpg", "image/png"];
+
+function ComunicadoFormModal({ onClose, onSave }) {
+  const [tipo, setTipo] = useState("Comunicado");
+  const [titulo, setTitulo] = useState("");
+  const [destino, setDestino] = useState("Todos");
+  const [conteudo, setConteudo] = useState("");
+  const [anexo, setAnexo] = useState(null);
+  const [erroAnexo, setErroAnexo] = useState("");
+
+  function handleArquivo(e) {
+    const file = e.target.files && e.target.files[0];
+    e.target.value = "";
+    if (!file) return;
+    if (!TIPOS_ANEXO_ACEITOS.includes(file.type)) {
+      setErroAnexo("Só é possível anexar arquivos em PDF, JPEG ou PNG.");
+      setAnexo(null);
+      return;
+    }
+    if (file.size > MAX_ANEXO_BYTES) {
+      setErroAnexo("Arquivo muito grande para anexar (máx. 3MB).");
+      setAnexo(null);
+      return;
+    }
+    setErroAnexo("");
+    const reader = new FileReader();
+    reader.onload = () => {
+      setAnexo({ nome: file.name, tipo: file.type, tamanho: file.size, dataUrl: reader.result });
+    };
+    reader.onerror = () => setErroAnexo("Não foi possível ler esse arquivo. Tente novamente.");
+    reader.readAsDataURL(file);
+  }
+
+  return (
+    <Modal title="Novo comunicado" onClose={onClose}>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Tipo">
+          <select className={inputCls} value={tipo} onChange={(e) => setTipo(e.target.value)}>
+            {TIPOS_COMUNICADO.map((t) => <option key={t.key} value={t.key}>{t.key}</option>)}
+          </select>
+        </Field>
+        <Field label="Destino">
+          <input className={inputCls} value={destino} onChange={(e) => setDestino(e.target.value)} placeholder="Todos / Bloco A / etc." />
+        </Field>
+      </div>
+      <Field label="Título">
+        <input className={inputCls} value={titulo} onChange={(e) => setTitulo(e.target.value)} placeholder="Ex.: Manutenção programada do elevador" />
+      </Field>
+      <Field label="Conteúdo">
+        <textarea className={inputCls} rows={4} value={conteudo} onChange={(e) => setConteudo(e.target.value)} placeholder="Texto do comunicado..." />
+      </Field>
+      <Field label="Anexo — PDF, JPEG ou PNG (opcional, fica arquivado junto com o comunicado)">
+        {anexo ? (
+          <div className="flex items-center gap-3 border border-[var(--border)] rounded-lg px-3 py-2.5 bg-[var(--bg)]">
+            {anexo.tipo.startsWith("image/") ? (
+              <img src={anexo.dataUrl} alt={anexo.nome} className="w-10 h-10 rounded object-cover border border-[var(--border)] shrink-0" />
+            ) : (
+              <div className="w-10 h-10 rounded bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center shrink-0">
+                <Paperclip size={16} className="text-[var(--text-secondary)]" />
+              </div>
+            )}
+            <div className="min-w-0 flex-1">
+              <p className="text-sm text-[var(--text-primary)] truncate">{anexo.nome}</p>
+              <p className="text-[11px] text-[var(--text-muted)]">{(anexo.tamanho / 1024).toFixed(0)} KB</p>
+            </div>
+            <button onClick={() => setAnexo(null)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1 shrink-0">
+              <X size={16} />
+            </button>
+          </div>
+        ) : (
+          <label className="flex items-center justify-center gap-2 border border-dashed border-[var(--border)] rounded-lg px-3 py-3 text-sm text-[var(--text-secondary)] cursor-pointer hover:border-[var(--accent-50)] hover:text-[var(--accent)] transition-colors">
+            <Paperclip size={15} />
+            Escolher arquivo (PDF, JPEG ou PNG)
+            <input type="file" accept="application/pdf,image/png,image/jpeg" className="hidden" onChange={handleArquivo} />
+          </label>
+        )}
+        {erroAnexo && <p className="text-xs text-[var(--danger)] mt-1.5">{erroAnexo}</p>}
+      </Field>
+      <button
+        disabled={!titulo.trim()}
+        onClick={() => onSave({ tipo, titulo, destino, conteudo, anexo })}
+        className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mt-1"
+      >
+        Publicar comunicado
+      </button>
+    </Modal>
+  );
+}
+
+/* ---------------------------------------------------------
+   Consumos
+--------------------------------------------------------- */
+
+function ConsumoCard({ entry, consumos, onDelete }) {
+  const tipoInfo = TIPOS_CONSUMO.find((t) => t.key === entry.tipo) || TIPOS_CONSUMO[0];
+  const variacao = calcularVariacaoValor(consumos, entry);
+  return (
+    <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl px-4 py-3.5 shadow-lg shadow-black/20">
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-sm text-[var(--text-primary)] font-medium">
+            {tipoInfo.emoji} {tipoInfo.label} — {formatMesAno(entry.mesAno)}
+          </p>
+          {entry.tipo === "energia" && entry.bloco && (
+            <p className="text-[11px] text-[var(--text-muted)] mt-0.5">{entry.bloco}</p>
+          )}
+          {tipoInfo.unidade && (
+            <p className="text-xs text-[var(--text-body)] mt-2">Consumo: {Number(entry.consumo || 0).toLocaleString("pt-BR")} {tipoInfo.unidade}</p>
+          )}
+          <p className={`text-xs text-[var(--text-body)] ${tipoInfo.unidade ? "" : "mt-2"}`}>Valor: {formatMoeda(entry.valor)}</p>
+          {variacao !== null && (
+            <p className="text-xs mt-1" style={{ color: corVariacao(variacao) }}>
+              Variação: {formatVariacao(variacao)} em relação ao mês anterior
+            </p>
+          )}
+        </div>
+        <button onClick={() => onDelete(entry.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1 shrink-0"><Trash2 size={14} /></button>
+      </div>
+    </div>
+  );
+}
+
+function ConsumoTipoView({ tipo, consumos, onNovo, onDelete }) {
+  const tipoInfo = TIPOS_CONSUMO.find((t) => t.key === tipo) || TIPOS_CONSUMO[0];
+  const entries = consumos.filter((c) => c.tipo === tipo).sort((a, b) => (a.mesAno < b.mesAno ? 1 : -1));
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-xs text-[var(--text-muted)]">{entries.length} registro{entries.length === 1 ? "" : "s"}</p>
+        <button onClick={onNovo} className="flex items-center gap-1.5 bg-[var(--accent)] text-[var(--accent-contrast)] text-sm font-semibold px-3 py-2 rounded-lg">
+          <Plus size={16} /> Novo registro
+        </button>
+      </div>
+      {entries.length === 0 ? (
+        <EmptyState text={`Nenhum registro de ${tipoInfo.label.toLowerCase()} ainda.`} actionLabel="Adicionar o primeiro" onAction={onNovo} />
+      ) : (
+        <div className="grid sm:grid-cols-2 gap-3">
+          {entries.map((e) => <ConsumoCard key={e.id} entry={e} consumos={consumos} onDelete={onDelete} />)}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ConsumoHistorico({ consumos, onDelete }) {
+  const entries = [...consumos].sort((a, b) => (a.mesAno < b.mesAno ? 1 : a.mesAno > b.mesAno ? -1 : 0));
+  return (
+    <div>
+      {entries.length === 0 ? (
+        <EmptyState text="Nenhum consumo registrado ainda." />
+      ) : (
+        <div className="grid sm:grid-cols-2 gap-3">
+          {entries.map((e) => <ConsumoCard key={e.id} entry={e} consumos={consumos} onDelete={onDelete} />)}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ConsumoComparativos({ consumos }) {
+  const grupos = useMemo(() => {
+    const map = {};
+    for (const c of consumos) {
+      const key = c.tipo + "|" + (c.tipo === "energia" ? (c.bloco || "Geral") : "");
+      if (!map[key]) map[key] = [];
+      map[key].push(c);
+    }
+    return Object.entries(map).map(([key, items]) => {
+      const [tipo, bloco] = key.split("|");
+      const sorted = [...items].sort((a, b) => (a.mesAno < b.mesAno ? 1 : -1)).slice(0, 6);
+      return { tipo, bloco, items: sorted };
+    });
+  }, [consumos]);
+
+  if (grupos.length === 0) {
+    return <EmptyState text="Ainda não há dados suficientes para comparar. Registre alguns consumos primeiro." />;
+  }
+
+  return (
+    <div className="space-y-4">
+      {grupos.map((g) => {
+        const tipoInfo = TIPOS_CONSUMO.find((t) => t.key === g.tipo) || TIPOS_CONSUMO[0];
+        return (
+          <div key={g.tipo + g.bloco} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-4 shadow-lg shadow-black/20">
+            <p className="text-sm text-[var(--text-primary)] font-medium mb-3">
+              {tipoInfo.emoji} {tipoInfo.label}{g.bloco ? ` — ${g.bloco}` : ""}
+            </p>
+            <div className="space-y-1.5">
+              {g.items.map((e) => {
+                const variacao = calcularVariacaoValor(consumos, e);
+                return (
+                  <div key={e.id} className="flex items-center justify-between text-xs py-1.5 border-b border-[var(--border-soft)] last:border-0 gap-2">
+                    <span className="text-[var(--text-secondary)] shrink-0" style={{ fontFamily: "'JetBrains Mono', monospace" }}>{formatMesAno(e.mesAno)}</span>
+                    {tipoInfo.unidade && <span className="text-[var(--text-body)]">{Number(e.consumo || 0).toLocaleString("pt-BR")} {tipoInfo.unidade}</span>}
+                    <span className="text-[var(--text-body)]">{formatMoeda(e.valor)}</span>
+                    <span style={{ color: corVariacao(variacao), minWidth: 48, textAlign: "right" }}>{formatVariacao(variacao) || "—"}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function ConsumoFormModal({ tipoInicial, onClose, onSave }) {
+  const tipoValido = TIPOS_CONSUMO.some((t) => t.key === tipoInicial) ? tipoInicial : "agua";
+  const [tipo, setTipo] = useState(tipoValido);
+  const [bloco, setBloco] = useState("");
+  const [mesAno, setMesAno] = useState("");
+  const [consumo, setConsumo] = useState("");
+  const [valor, setValor] = useState("");
+  const tipoInfo = TIPOS_CONSUMO.find((t) => t.key === tipo) || TIPOS_CONSUMO[0];
+
+  return (
+    <Modal title="Novo registro de consumo" onClose={onClose}>
+      <Field label="Tipo">
+        <select className={inputCls} value={tipo} onChange={(e) => setTipo(e.target.value)}>
+          {TIPOS_CONSUMO.map((t) => <option key={t.key} value={t.key}>{t.emoji} {t.label}</option>)}
+        </select>
+      </Field>
+      {tipo === "energia" && (
+        <Field label="Bloco / medidor (você recebe várias contas por mês)">
+          <input className={inputCls} value={bloco} onChange={(e) => setBloco(e.target.value)} placeholder="Ex.: Bloco A" />
+        </Field>
+      )}
+      <Field label="Mês de referência">
+        <input type="month" className={inputCls} value={mesAno} onChange={(e) => setMesAno(e.target.value)} />
+      </Field>
+      {tipoInfo.unidade ? (
+        <div className="grid grid-cols-2 gap-3">
+          <Field label={`Consumo (${tipoInfo.unidade})`}>
+            <input type="number" className={inputCls} value={consumo} onChange={(e) => setConsumo(e.target.value)} placeholder="0" />
+          </Field>
+          <Field label="Valor (R$)">
+            <input type="number" className={inputCls} value={valor} onChange={(e) => setValor(e.target.value)} placeholder="0" />
+          </Field>
+        </div>
+      ) : (
+        <Field label="Valor (R$)">
+          <input type="number" className={inputCls} value={valor} onChange={(e) => setValor(e.target.value)} placeholder="0" />
+        </Field>
+      )}
+      <button
+        disabled={!mesAno || !valor || (tipoInfo.unidade && !consumo)}
+        onClick={() => onSave({ tipo, bloco: tipo === "energia" ? bloco : "", mesAno, consumo: tipoInfo.unidade ? Number(consumo) : null, valor: Number(valor) })}
+        className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mt-1"
+      >
+        Salvar registro
+      </button>
+    </Modal>
+  );
+}
+
+/* ---------------------------------------------------------
+   Notificações e multas
+--------------------------------------------------------- */
+
+function AlertaReincidencia({ notificacoes, nome }) {
+  const alvo = (nome || "").trim().toLowerCase();
+  if (!alvo) return null;
+  const anteriores = notificacoes
+    .filter((n) => (n.notificado || "").trim().toLowerCase() === alvo)
+    .sort((a, b) => (a.data < b.data ? 1 : -1));
+  if (anteriores.length === 0) return null;
+  const ultima = anteriores[0];
+  const infracao = INFRACOES.find((i) => i.id === ultima.infracaoId);
+  return (
+    <div className="flex items-start gap-2.5 bg-[var(--warning-15)] border border-[var(--warning-40)] rounded-xl px-3.5 py-3 mb-4">
+      <AlertTriangle size={16} className="text-[var(--warning)] shrink-0 mt-0.5" />
+      <p className="text-xs text-[var(--text-primary)] leading-relaxed">
+        <span className="font-semibold">{ultima.notificado}</span> foi notificado(a) em {formatDate(ultima.data)}, por {infracao ? infracao.titulo.toLowerCase() : ultima.infracaoTitulo || "infração não identificada"}.
+      </p>
+    </div>
+  );
+}
+
+function NotificacoesTab({ condominioNome, sindicoNome, notificacoes, onAdd, onDelete }) {
+  const [bloco, setBloco] = useState("");
+  const [apartamento, setApartamento] = useState("");
+  const [notificado, setNotificado] = useState("");
+  const [notificanteNome, setNotificanteNome] = useState(sindicoNome || "");
+  const [infracaoId, setInfracaoId] = useState("");
+  const [tipoDocumento, setTipoDocumento] = useState("notificacao");
+  const [gerando, setGerando] = useState(false);
+  const [erro, setErro] = useState("");
+
+  const infracao = INFRACOES.find((i) => i.id === infracaoId) || null;
+
+  async function gerar() {
+    if (!bloco.trim() || !apartamento.trim() || !notificado.trim() || !infracao) {
+      setErro("Preencha bloco, apartamento, notificado(a) e escolha a infração.");
+      return;
+    }
+    setErro("");
+    setGerando(true);
+    try {
+      const data = todayISO();
+      const { dataUrl, nomeArquivo } = await gerarPdfNotificacao({
+        condominioNome,
+        sindicoNome: notificanteNome.trim() || sindicoNome,
+        bloco: bloco.trim(),
+        apartamento: apartamento.trim(),
+        notificado: notificado.trim(),
+        infracao,
+        tipoDocumento,
+        data,
+      });
+      onAdd({
+        bloco: bloco.trim(),
+        apartamento: apartamento.trim(),
+        notificado: notificado.trim(),
+        infracaoId: infracao.id,
+        infracaoTitulo: infracao.titulo,
+        tipoDocumento,
+        data,
+        arquivo: { nome: nomeArquivo, dataUrl },
+      });
+      setBloco("");
+      setApartamento("");
+      setNotificado("");
+      setInfracaoId("");
+      setTipoDocumento("notificacao");
+    } catch (e) {
+      setErro("Não foi possível gerar o PDF agora. Verifique sua conexão e tente novamente.");
+    } finally {
+      setGerando(false);
+    }
+  }
+
+  return (
+    <div>
+      <h2 className="font-semibold mb-1" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: AZUL_ESCURO }}>Notificações</h2>
+      <p className="text-xs text-[var(--text-muted)] mb-4">Gere notificações e multas com base no Regimento Interno, com histórico organizado por morador.</p>
+
+      <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 shadow-lg shadow-black/20 mb-6">
+        <Field label="Notificante (nome completo de quem está emitindo)">
+          <input className={inputCls} value={notificanteNome} onChange={(e) => setNotificanteNome(e.target.value)} placeholder="Nome do síndico(a)" />
+        </Field>
+        <div className="grid grid-cols-2 gap-3">
+          <Field label="Bloco">
+            <input className={inputCls} value={bloco} onChange={(e) => setBloco(e.target.value)} placeholder="Ex.: Bloco A" />
+          </Field>
+          <Field label="Apartamento">
+            <input className={inputCls} value={apartamento} onChange={(e) => setApartamento(e.target.value)} placeholder="Ex.: 101" />
+          </Field>
+        </div>
+        <Field label="Notificado(a)">
+          <input className={inputCls} value={notificado} onChange={(e) => setNotificado(e.target.value)} placeholder="Nome completo" />
+        </Field>
+
+        <AlertaReincidencia notificacoes={notificacoes} nome={notificado} />
+
+        <Field label="Infração">
+          <select className={inputCls} value={infracaoId} onChange={(e) => setInfracaoId(e.target.value)}>
+            <option value="">Selecione a infração...</option>
+            {INFRACOES.map((i) => <option key={i.id} value={i.id}>{i.titulo}</option>)}
+          </select>
+        </Field>
+
+        {infracao && (
+          <div className="bg-[var(--bg-card-alt)] border border-[var(--border-soft)] rounded-xl px-3.5 py-3 mb-4 space-y-1.5">
+            <p className="text-xs text-[var(--text-body)]"><span className="font-semibold text-[var(--text-primary)]">Penalidade:</span> {infracao.penalidade}</p>
+            <p className="text-xs text-[var(--text-body)]"><span className="font-semibold text-[var(--text-primary)]">Base legal:</span> {infracao.baseLegal}</p>
+          </div>
+        )}
+
+        <p className="text-xs font-medium text-[var(--text-secondary)] mb-2">Tipo de documento</p>
+        <div className="flex gap-2 mb-4">
+          <button
+            onClick={() => setTipoDocumento("notificacao")}
+            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg text-sm font-medium border transition-colors"
+            style={{
+              borderColor: tipoDocumento === "notificacao" ? "var(--accent)" : "var(--border)",
+              backgroundColor: tipoDocumento === "notificacao" ? "var(--accent-15)" : "transparent",
+              color: tipoDocumento === "notificacao" ? "var(--accent)" : "var(--text-secondary)",
+            }}
+          >
+            <Bell size={15} /> Notificação
+          </button>
+          <button
+            onClick={() => setTipoDocumento("multa")}
+            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg text-sm font-medium border transition-colors"
+            style={{
+              borderColor: tipoDocumento === "multa" ? "var(--danger)" : "var(--border)",
+              backgroundColor: tipoDocumento === "multa" ? "var(--danger-15)" : "transparent",
+              color: tipoDocumento === "multa" ? "var(--danger)" : "var(--text-secondary)",
+            }}
+          >
+            <AlertTriangle size={15} /> Multa
+          </button>
+        </div>
+
+        {erro && <p className="text-xs text-[var(--danger)] mb-3">{erro}</p>}
+
+        <button
+          disabled={gerando}
+          onClick={gerar}
+          className="w-full bg-[var(--accent)] disabled:opacity-50 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm"
+        >
+          {gerando ? "Gerando PDF..." : "Gerar arquivo"}
+        </button>
+      </div>
+
+      <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Histórico</h3>
+      {notificacoes.length === 0 ? (
+        <EmptyState text="Nenhuma notificação gerada ainda." />
+      ) : (
+        <div className="space-y-2">
+          {[...notificacoes].sort((a, b) => (a.data < b.data ? 1 : -1)).map((n) => (
+            <div key={n.id} className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 flex items-start justify-between gap-3 shadow-md shadow-black/10">
+              <div className="min-w-0">
+                <div className="flex items-center gap-2 mb-1 flex-wrap">
+                  <Pill color={n.tipoDocumento === "multa" ? "var(--danger)" : "var(--accent)"}>
+                    {n.tipoDocumento === "multa" ? "Multa" : "Notificação"}
+                  </Pill>
+                  <span className="text-[11px] text-[var(--text-muted)]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>{formatDate(n.data)}</span>
+                  <span className="text-[11px] text-[var(--text-muted)]">Bloco {n.bloco} · Apto {n.apartamento}</span>
+                </div>
+                <p className="text-sm text-[var(--text-primary)] font-medium truncate">{n.notificado}</p>
+                <p className="text-xs text-[var(--text-body)] mt-0.5">{n.infracaoTitulo}</p>
+                {n.arquivo && (
+                  <a
+                    href={n.arquivo.dataUrl}
+                    download={n.arquivo.nome}
+                    className="inline-flex items-center gap-1.5 mt-2 text-xs text-[var(--accent)] hover:text-[var(--accent-hover)] bg-[var(--bg-card-alt)] border border-[var(--border)] rounded-lg px-2.5 py-1.5"
+                  >
+                    <Paperclip size={12} /> Baixar PDF novamente
+                  </a>
+                )}
+              </div>
+              <button onClick={() => onDelete(n.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1 shrink-0"><Trash2 size={14} /></button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   Limpeza — estoque e financeiro
+--------------------------------------------------------- */
+
+function EstoqueItemCard({ item, onEdit, onDelete }) {
+  const baixo = Number(item.quantidade) <= Number(item.estoqueMinimo);
+  return (
+    <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden shadow-lg shadow-black/20">
+      <div className="absolute left-0 top-0 bottom-0 w-1.5" style={{ backgroundColor: baixo ? "var(--danger)" : "var(--success)" }} />
+      <div className="pl-5 pr-4 py-4 flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="text-sm text-[var(--text-primary)] font-medium truncate">{item.item}</p>
+          <p className="text-xs text-[var(--text-body)] mt-1">{item.quantidade} {item.unidade} em estoque</p>
+          <p className="text-[11px] text-[var(--text-muted)] mt-0.5">{item.localizacao}</p>
+          {baixo && <p className="text-[11px] text-[var(--danger)] font-medium mt-1">Estoque baixo — mínimo: {item.estoqueMinimo} {item.unidade}</p>}
+        </div>
+        <div className="flex gap-1 shrink-0">
+          <button onClick={() => onEdit(item)} className="text-[var(--text-muted)] hover:text-[var(--text-primary)] p-1"><Pencil size={14} /></button>
+          <button onClick={() => onDelete(item.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1"><Trash2 size={14} /></button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function EstoqueFormModal({ initial, onClose, onSave }) {
+  const [item, setItem] = useState(initial?.item || "");
+  const [quantidade, setQuantidade] = useState(initial?.quantidade ?? "");
+  const [unidade, setUnidade] = useState(initial?.unidade || "un.");
+  const [estoqueMinimo, setEstoqueMinimo] = useState(initial?.estoqueMinimo ?? "");
+  const [localizacao, setLocalizacao] = useState(initial?.localizacao || "");
+
+  return (
+    <Modal title={initial ? "Editar item" : "Novo item de estoque"} onClose={onClose}>
+      <Field label="Item">
+        <input className={inputCls} value={item} onChange={(e) => setItem(e.target.value)} placeholder="Ex.: Detergente neutro" />
+      </Field>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Quantidade">
+          <input type="number" className={inputCls} value={quantidade} onChange={(e) => setQuantidade(e.target.value)} placeholder="0" />
+        </Field>
+        <Field label="Unidade">
+          <input className={inputCls} value={unidade} onChange={(e) => setUnidade(e.target.value)} placeholder="un. / pct / L" />
+        </Field>
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <Field label="Estoque mínimo">
+          <input type="number" className={inputCls} value={estoqueMinimo} onChange={(e) => setEstoqueMinimo(e.target.value)} placeholder="0" />
+        </Field>
+        <Field label="Localização">
+          <input className={inputCls} value={localizacao} onChange={(e) => setLocalizacao(e.target.value)} placeholder="Depósito, almoxarifado..." />
+        </Field>
+      </div>
+      <button
+        disabled={!item.trim() || quantidade === ""}
+        onClick={() => onSave({ item: item.trim(), quantidade: Number(quantidade), unidade, estoqueMinimo: Number(estoqueMinimo) || 0, localizacao })}
+        className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mt-1"
+      >
+        Salvar
+      </button>
+    </Modal>
+  );
+}
+
+function LimpezaFinanceiroCard({ entry, historico, onDelete }) {
+  const anteriores = historico.filter((h) => h.id !== entry.id && h.mesAno < entry.mesAno).sort((a, b) => (a.mesAno < b.mesAno ? 1 : -1));
+  const anterior = anteriores[0];
+  const variacao = anterior && anterior.valorGasto ? ((entry.valorGasto - anterior.valorGasto) / anterior.valorGasto) * 100 : null;
+  return (
+    <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl px-4 py-3.5 shadow-lg shadow-black/20 flex items-start justify-between gap-3">
+      <div>
+        <p className="text-sm text-[var(--text-primary)] font-medium">{formatMesAno(entry.mesAno)}</p>
+        <p className="text-xs text-[var(--text-body)] mt-1">Gasto com limpeza: {formatMoeda(entry.valorGasto)}</p>
+        {variacao !== null && (
+          <p className="text-xs mt-1" style={{ color: corVariacao(variacao) }}>
+            Variação: {formatVariacao(variacao)} em relação ao mês anterior
+          </p>
+        )}
+      </div>
+      <button onClick={() => onDelete(entry.id)} className="text-[var(--text-muted)] hover:text-[var(--danger)] p-1 shrink-0"><Trash2 size={14} /></button>
+    </div>
+  );
+}
+
+function LimpezaFinanceiroFormModal({ onClose, onSave }) {
+  const [mesAno, setMesAno] = useState("");
+  const [valorGasto, setValorGasto] = useState("");
+  return (
+    <Modal title="Registrar gasto do mês" onClose={onClose}>
+      <Field label="Mês de referência">
+        <input type="month" className={inputCls} value={mesAno} onChange={(e) => setMesAno(e.target.value)} />
+      </Field>
+      <Field label="Valor gasto com limpeza (R$)">
+        <input type="number" className={inputCls} value={valorGasto} onChange={(e) => setValorGasto(e.target.value)} placeholder="0" />
+      </Field>
+      <button
+        disabled={!mesAno || !valorGasto}
+        onClick={() => onSave({ mesAno, valorGasto: Number(valorGasto) })}
+        className="w-full bg-[var(--accent)] disabled:opacity-40 text-[var(--accent-contrast)] font-semibold py-2.5 rounded-lg text-sm mt-1"
+      >
+        Salvar
+      </button>
+    </Modal>
+  );
+}
+
+const rootEl = document.getElementById("root");
+ReactDOM.createRoot(rootEl).render(<App />);
+
+
+</script>
+</body>
+</html>
